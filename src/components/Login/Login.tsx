@@ -1,10 +1,24 @@
+import { useState } from "react";
 import "./Login.css";
 
 const Login = () => {
+  const [email, setEmail] = useState("");
+  const [password, setPassword] = useState("");
+
   return (
     <div className="login">
-      <input type="text" placeholder="Email" />
-      <input type="text" placeholder="Password" />
+      <input
+        onChange={(e) => setEmail(e.target.value)}
+        type="text"
+        placeholder="Email"
+        value={email}
+      />
+      <input
+        onChange={(e) => setPassword(e.target.value)}
+        type="text"
+        placeholder="Password"
+        value={password}
+      />
       <button>Login</button>
 
       <div className="login__separator__container">
