@@ -1,17 +1,7 @@
-import React from "react";
-import Auth from "./components/Auth";
-import { BrowserRouter, Route, Routes } from "react-router-dom";
-import Home from "./components/Home";
+import Router from "./components/Router";
 
 const App: React.FC = () => {
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Auth />} />
-        <Route path="/home" element={<Home />} />
-      </Routes>
-    </BrowserRouter>
-  );
+  return <Router />;
 };
 
 export default App;
