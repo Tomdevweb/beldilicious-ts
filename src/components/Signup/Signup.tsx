@@ -8,9 +8,9 @@ import userIcon from "../../assets/user-icon.svg";
 import visibilityOffIcon from "../../assets/visibility-off.svg";
 import visibilityOnIcon from "../../assets/visibility-on.svg";
 import { auth } from "../../firebaseConfig";
+import { useTogglePassword } from "../../hooks/useTogglePassword";
 import "../../styles/login-signup-form.scss";
 import { handleGoogleLogin } from "../../utils/handleGoogleLogin";
-import { useTogglePassword } from "../../hooks/useTogglePassword";
 
 const Signup = () => {
   const [email, setEmail] = useState("");
@@ -38,10 +38,10 @@ const Signup = () => {
   return (
     <div className="form">
       <div className="form__group">
-        <p className="form__title">
-          Create account <br />
-          Get started with your free account
-        </p>
+        <div className="form__title">
+          <h1>Create account</h1>
+          <p>Get started with your free account</p>
+        </div>
 
         <div className="form__field">
           <div className="icon icon--email">
@@ -72,7 +72,7 @@ const Signup = () => {
           <input
             onChange={(e) => setPassword(e.target.value)}
             type={shown ? "password" : "text"}
-            placeholder="Password"
+            placeholder="Create a password"
             value={password}
           />
           {shown ? (
@@ -89,7 +89,7 @@ const Signup = () => {
         <div className="form__separator-container">
           <div className="form__separator"></div>
           <div className="form__separator__text">
-            <span>OU</span>
+            <span>OR</span>
           </div>
           <div className="form__separator"></div>
         </div>

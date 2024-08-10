@@ -1,9 +1,9 @@
 import "firebaseui/dist/firebaseui.css";
 import { useState } from "react";
-import logo from "../../assets/BlueWave2.png";
-import Login from "../Login/Login";
-import Signup from "../Signup/Signup";
-import "../../styles/auth.scss";
+import logo from "../assets/BlueWave2.png";
+import Login from "./Login/Login";
+import Signup from "./Signup/Signup";
+import "../styles/auth.scss";
 
 const Auth: React.FC = () => {
   const [active, setActive] = useState("login");

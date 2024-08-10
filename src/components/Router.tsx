@@ -3,7 +3,7 @@ import { BrowserRouter, Navigate, Route, Routes } from "react-router-dom";
 import { useAppDispatch, useAppSelector } from "../app/hooks";
 import { loginUser, setLoading } from "../features/authSlice";
 import { auth } from "../firebaseConfig";
-import Authentication from "./Auth/Authentication";
+import Authentication from "./Authentication";
 import Home from "./Home";
 import { CustomUser } from "../utils/types";
 
