@@ -20,11 +20,11 @@ body {
   flex-direction: column;
   flex: 1;
   align-items: center;
-  justify-content: end;
+  margin-bottom: 50px;
 }
 
 .auth__left img {
-  width: 60%;
+  width: 80%;
 }
 
 .auth__left p {
@@ -46,7 +46,7 @@ body {
 .auth__more {
   border: 1px solid #fff;
   background-color: #fff;
-  border-radius: 20px;
+  border-radius: 5px;
   width: 100%;
   padding: 20px 40px;
   text-align: center;

@@ -6,8 +6,13 @@
   align-items: center;
   justify-content: space-between;
   border: 1px solid #fff;
-  border-radius: 20px;
+  background-color: white;
+  border-radius: 5px;
   padding: 20px;
+
+  .form__title {
+    color: rgb(118, 117, 117);
+  }
 
   &__group {
     width: 70%;
@@ -16,14 +21,24 @@
     gap: 15px;
 
     .form__field {
+      position: relative;
       display: flex;
       width: 100%;
 
       .icon {
         background-color: #dfdfdf;
         padding: 5px;
+        border-radius: 5px 0px 0px 5px;
       }
 
+      .icon--password-visibility {
+        position: absolute;
+        top: 2px;
+        right: 5px;
+        z-index: 1000;
+        cursor: pointer;
+        background-color: transparent;
+      }
       input {
         width: 100%;
         outline: none;
@@ -32,7 +47,6 @@
         border-radius: 0px 5px 5px 0px;
         border: 1px solid #dfdfdf;
         background-color: transparent;
-        color: #fff;
       }
     }
 
@@ -47,6 +61,14 @@
     }
     button:hover {
       background-color: #233dffd2;
+    }
+
+    .form__google button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      padding: 20px 20px;
     }
   }
 }

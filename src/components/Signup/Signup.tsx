@@ -1,18 +1,22 @@
+import { FirebaseError } from "firebase/app";
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { useState } from "react";
+import emailIcon from "../../assets/email-icon.svg";
+import googleIcon from "../../assets/google-icon.svg";
+import passwordIcon from "../../assets/password-icon.svg";
+import userIcon from "../../assets/user-icon.svg";
+import visibilityOffIcon from "../../assets/visibility-off.svg";
+import visibilityOnIcon from "../../assets/visibility-on.svg";
 import { auth } from "../../firebaseConfig";
 import "../../styles/login-signup-form.scss";
-import emailIcon from "../../assets/email-icon.svg";
-import userIcon from "../../assets/user-icon.svg";
-import passwordIcon from "../../assets/password-icon.svg";
-
 import { handleGoogleLogin } from "../../utils/handleGoogleLogin";
-import { FirebaseError } from "firebase/app";
+import { useTogglePassword } from "../../hooks/useTogglePassword";
 
 const Signup = () => {
   const [email, setEmail] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
+  const { shown, ToggleShowPassword } = useTogglePassword();
 
   console.log("----AUTH----", auth);
 
@@ -34,6 +38,11 @@ const Signup = () => {
   return (
     <div className="form">
       <div className="form__group">
+        <p className="form__title">
+          Create account <br />
+          Get started with your free account
+        </p>
+
         <div className="form__field">
           <div className="icon icon--email">
             <img src={emailIcon} alt="" />
@@ -62,25 +71,35 @@ const Signup = () => {
           </div>
           <input
             onChange={(e) => setPassword(e.target.value)}
-            type="password"
+            type={shown ? "password" : "text"}
             placeholder="Password"
             value={password}
           />
+          {shown ? (
+            <span onClick={ToggleShowPassword} className="icon icon--password-visibility">
+              <img src={visibilityOffIcon} alt="password icon" />
+            </span>
+          ) : (
+            <span onClick={ToggleShowPassword} className="icon icon--password-visibility">
+              <img src={visibilityOnIcon} alt="password icon" />
+            </span>
+          )}
         </div>
         <button onClick={handleSignup}>Sign Up</button>
-      </div>
-
-      <div className="form__separator-container">
-        <div className="form__separator"></div>
-        <div className="form__separator__text">
-          <span>OU</span>
+        <div className="form__separator-container">
+          <div className="form__separator"></div>
+          <div className="form__separator__text">
+            <span>OU</span>
+          </div>
+          <div className="form__separator"></div>
         </div>
-        <div className="form__separator"></div>
-      </div>
 
-      <button onClick={handleGoogleLogin} className="google-button">
-        Connect with Google
-      </button>
+        <div className="form__google">
+          <button onClick={handleGoogleLogin}>
+            <img src={googleIcon} alt="" /> Connect with Google
+          </button>
+        </div>
+      </div>
     </div>
   );
 };
