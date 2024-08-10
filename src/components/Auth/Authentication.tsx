@@ -3,7 +3,7 @@ import { useState } from "react";
 import logo from "../../assets/BlueWave2.png";
 import Login from "../Login/Login";
 import Signup from "../Signup/Signup";
-import "./auth.css";
+import "../../styles/auth.scss";
 
 const Auth: React.FC = () => {
   const [active, setActive] = useState("login");
@@ -17,10 +17,8 @@ const Auth: React.FC = () => {
         <img src={logo} alt="logo" />
         <p>
           Real-time ocean updates and alerts. <br />
-          Sign up now to stay informed and help preserve our oceans.
         </p>
       </div>
-
       <div className="auth__right">
         {active === "login" ? <Login /> : <Signup />}
         <div className="auth__more">

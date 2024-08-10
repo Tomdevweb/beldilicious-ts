@@ -1,7 +1,10 @@
 import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
 import { useState } from "react";
 import { auth } from "../../firebaseConfig";
-import "./Signup.css";
+import "../../styles/login-signup-form.scss";
+import emailIcon from "../../assets/email-icon.svg";
+import userIcon from "../../assets/user-icon.svg";
+import passwordIcon from "../../assets/password-icon.svg";
 
 const Signup = () => {
   const [email, setEmail] = useState("");
@@ -23,32 +26,50 @@ const Signup = () => {
   };
 
   return (
-    <div className="signup">
-      <input
-        onChange={(e) => setEmail(e.target.value)}
-        type="text"
-        placeholder="Email"
-        value={email}
-      />
-      <input
-        onChange={(e) => setUsername(e.target.value)}
-        type="text"
-        placeholder="Username"
-        value={username}
-      />
-      <input
-        onChange={(e) => setPassword(e.target.value)}
-        type="text"
-        placeholder="Password"
-        value={password}
-      />
-      <button onClick={handleSignup}>Sign Up</button>
-      <div className="signup__separator__container">
-        <div className="signup__separator"></div>
-        <div className="signup__separator__text">
+    <div className="form">
+      <div className="form__group">
+        <div className="form__field">
+          <div className="icon icon--email">
+            <img src={emailIcon} alt="" />
+          </div>
+          <input
+            onChange={(e) => setEmail(e.target.value)}
+            type="text"
+            placeholder="Email"
+            value={email}
+          />
+        </div>
+        <div className="form__field">
+          <div className="icon icon--username">
+            <img src={userIcon} alt="" />
+          </div>
+          <input
+            onChange={(e) => setUsername(e.target.value)}
+            type="text"
+            placeholder="Username"
+            value={username}
+          />
+        </div>
+        <div className="form__field">
+          <div className="icon icon--username">
+            <img src={passwordIcon} alt="" />
+          </div>
+          <input
+            onChange={(e) => setPassword(e.target.value)}
+            type="password"
+            placeholder="Password"
+            value={password}
+          />
+        </div>
+        <button onClick={handleSignup}>Sign Up</button>
+      </div>
+
+      <div className="form__separator-container">
+        <div className="form__separator"></div>
+        <div className="form__separator__text">
           <span>OU</span>
         </div>
-        <div className="signup__separator"></div>
+        <div className="form__separator"></div>
       </div>
     </div>
   );
