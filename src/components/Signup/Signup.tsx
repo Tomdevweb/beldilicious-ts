@@ -6,6 +6,9 @@ import emailIcon from "../../assets/email-icon.svg";
 import userIcon from "../../assets/user-icon.svg";
 import passwordIcon from "../../assets/password-icon.svg";
 
+import { handleGoogleLogin } from "../../utils/handleGoogleLogin";
+import { FirebaseError } from "firebase/app";
+
 const Signup = () => {
   const [email, setEmail] = useState("");
   const [username, setUsername] = useState("");
@@ -19,9 +22,12 @@ const Signup = () => {
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);
       const user = userCredential.user;
       await updateProfile(user, { displayName: username });
-    } catch (error: any) {
-      console.log(error.code);
-      alert(error.message);
+    } catch (error: unknown) {
+      if (error instanceof FirebaseError) {
+        alert(error.message);
+      } else {
+        alert("An unexpected error occurred");
+      }
     }
   };
 
@@ -71,6 +77,10 @@ const Signup = () => {
         </div>
         <div className="form__separator"></div>
       </div>
+
+      <button onClick={handleGoogleLogin} className="google-button">
+        Connect with Google
+      </button>
     </div>
   );
 };

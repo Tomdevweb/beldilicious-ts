@@ -29,7 +29,7 @@ const Auth: React.FC = () => {
               </>
             ) : (
               <>
-                Already have an account? <button onClick={handleChange}>Login</button>
+                Have an account? <button onClick={handleChange}>Login</button>
               </>
             )}
           </span>

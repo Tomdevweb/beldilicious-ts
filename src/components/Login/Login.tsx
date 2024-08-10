@@ -5,6 +5,8 @@ import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../firebaseConfig";
 import emailIcon from "../../assets/email-icon.svg";
 import passwordIcon from "../../assets/password-icon.svg";
+import { handleGoogleLogin } from "../../utils/handleGoogleLogin";
+import { FirebaseError } from "firebase/app";
 
 const Login = () => {
   const [email, setEmail] = useState("");
@@ -13,8 +15,12 @@ const Login = () => {
   const handleLogin = async () => {
     try {
       await signInWithEmailAndPassword(auth, email, password);
-    } catch (error: any) {
-      alert(error.message);
+    } catch (error: unknown) {
+      if (error instanceof FirebaseError) {
+        alert(error.message);
+      } else {
+        alert("An unexpected error occurred");
+      }
     }
   };
 
@@ -54,6 +60,8 @@ const Login = () => {
         </div>
         <div className="form__separator"></div>
       </div>
+
+      <button onClick={handleGoogleLogin}>Connect with Google</button>
     </div>
   );
 };
