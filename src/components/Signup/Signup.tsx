@@ -1,5 +1,5 @@
-import { createUserWithEmailAndPassword, updateProfile, User, UserCredential } from "firebase/auth";
-import { ChangeEvent, useState } from "react";
+import { createUserWithEmailAndPassword, updateProfile } from "firebase/auth";
+import { useState } from "react";
 import { auth } from "../../firebaseConfig";
 import "./Signup.css";
 
@@ -10,6 +10,7 @@ const Signup = () => {
 
   console.log("----AUTH----", auth);
 
+  // Fonction createUser de Firebase
   const handleSignup = async () => {
     try {
       const userCredential = await createUserWithEmailAndPassword(auth, email, password);

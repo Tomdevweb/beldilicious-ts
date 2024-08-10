@@ -1,20 +1,11 @@
-import { EmailAuthProvider, GoogleAuthProvider, signOut, UserCredential } from "firebase/auth";
-
 import "firebaseui/dist/firebaseui.css";
 import { useState } from "react";
-import { auth } from "../../firebaseConfig";
-import "./auth.css";
-// import { useNavigate } from "react-router-dom";
-import { useNavigate } from "react-router-dom";
-import { useAppDispatch } from "../../app/hooks";
 import logo from "../../assets/BlueWave2.png";
-import { loginUser, setLoading } from "../../features/authSlice";
 import Login from "../Login/Login";
 import Signup from "../Signup/Signup";
+import "./auth.css";
 
 const Auth: React.FC = () => {
-  // const dispatch = useAppDispatch();
-  const navigate = useNavigate();
   const [active, setActive] = useState("login");
 
   const handleChange = () => {

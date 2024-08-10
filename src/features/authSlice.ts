@@ -1,11 +1,9 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { User } from "firebase/auth";
+import { AuthState, CustomUser } from "../utils/types";
+// import { User } from "firebase/auth";
 
 // Type User = type par défaut Firebase pour représenter un utilisateur authentifié.
-type AuthState = {
-  user: User | null;
-  isLoading: Boolean;
-};
+// Utilisation d'un type custom CustomUser au lieu de User de firebase a trop de propriétés attendue dont on a pas besoin et cela cause des erreurs de typage dans mon router (voir types.ts)
 
 const initialState: AuthState = {
   user: null,
@@ -16,7 +14,7 @@ const authSlice = createSlice({
   name: "auth",
   initialState,
   reducers: {
-    loginUser: (state, action: PayloadAction<User>) => {
+    loginUser: (state, action: PayloadAction<CustomUser>) => {
       state.user = action.payload;
       state.isLoading = false;
     },
