@@ -6,12 +6,12 @@ import { Auth, getAuth } from "firebase/auth";
 
 // Your web app's Firebase configuration
 const firebaseConfig: FirebaseOptions = {
-  apiKey: "AIzaSyC-C1OEjtP4RlIU9-Ixpx8gTfF9xlg8GSU",
-  authDomain: "bluewave-tracker.firebaseapp.com",
-  projectId: "bluewave-tracker",
-  storageBucket: "bluewave-tracker.appspot.com",
-  messagingSenderId: "575622740490",
-  appId: "1:575622740490:web:c062e3259d3a254b253df3",
+  apiKey: "AIzaSyANrlxVkSUpCMaqTl_dHOeSGc58gq0vEWc",
+  authDomain: "beldilicious.firebaseapp.com",
+  projectId: "beldilicious",
+  storageBucket: "beldilicious.appspot.com",
+  messagingSenderId: "409572225225",
+  appId: "1:409572225225:web:47bf2beee51d4204af9d18",
 };
 
 // Initialize Firebase

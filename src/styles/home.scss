@@ -1,0 +1,243 @@
+* {
+  margin: 0;
+  padding: 0;
+
+  box-sizing: border-box;
+}
+
+body {
+  font-size: 14px;
+}
+
+main {
+  display: flex;
+  align-items: end;
+  margin: 100px 50px;
+  align-items: start;
+  justify-content: center;
+}
+
+.header-container {
+  background-image: url("../assets/header-background.png");
+  background-size: 100%;
+  background-position: 0% 25%;
+  height: 550px;
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    gap: 2rem;
+  }
+
+  .header-title {
+    font-size: 30px;
+  }
+}
+
+.search-container {
+  background-color: #0097b2;
+  width: 45%;
+  height: 200px;
+  padding: 40px 30px;
+  gap: 1rem;
+  border-radius: 3px;
+
+  label {
+    font-size: 16px;
+  }
+  .search-box {
+    border: 1px solid rgb(230, 229, 229);
+    border-radius: 50px;
+    height: 60px;
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+    padding: 2px;
+    box-shadow: 5px 10px 10px -5px rgba(0, 0, 0, 0.1);
+    .location-icon {
+      height: 40px;
+      align-self: center;
+    }
+    #search-input {
+      width: 80%;
+      padding: 5px;
+      border: none;
+      outline: none;
+      border-radius: 50px;
+      font-size: 16px;
+    }
+    button {
+      width: 30%;
+      border: none;
+      border-radius: 50px;
+      background-color: #49dd9d;
+      color: #fff;
+      font-size: 16px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+  }
+}
+
+.nav {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 50px;
+
+  .logo {
+    font-size: 30px;
+    font-weight: 600;
+  }
+  .nav-link-container {
+    width: 20%;
+    display: flex;
+    justify-content: space-between;
+    padding: 10px 10px;
+
+    div {
+      width: 48%;
+      cursor: pointer;
+      background-color: #fff;
+      padding: 2px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 2px;
+      font-size: 16px;
+      background-color: #fff;
+    }
+
+    .nav-account-link {
+      background-color: #000;
+      color: #fff;
+    }
+  }
+}
+
+.divider {
+  width: 10px;
+  height: 1000px;
+}
+
+.side-bar {
+  width: 20%;
+
+  p {
+    font-size: 20px;
+    font-weight: 500;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+  .side-bar-inputs {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.restaurants-list {
+  width: 50%;
+}
+
+.home-title {
+  font-size: 30px;
+
+  font-weight: 600;
+  margin-left: 20px;
+}
+
+.cards-container {
+  max-width: 1440px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  padding: 20px;
+}
+
+.card {
+  background-color: #fdfdfd;
+  width: 25%;
+  height: fit-content;
+  font-size: 12px;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.2);
+  text-decoration: none;
+  border-radius: 10px;
+
+  .card-cover {
+    width: 300px;
+    height: 300px;
+  }
+  .ant-card {
+    border-radius: none;
+  }
+  .ant-card-cover {
+    img {
+      height: 200px;
+      width: 200px;
+      object-fit: cover;
+      border-radius: 10px 0 0 10px;
+    }
+  }
+
+  .ant-card-body {
+    padding: 15px 20px;
+  }
+  .card-content-container {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+
+    .restaurant-title {
+      font-size: 20px;
+      font-weight: 500;
+    }
+    .restaurant-description {
+      font-size: 13px;
+    }
+
+    .restaurant-style {
+      font-style: italic;
+    }
+
+    .menu-popup-btn {
+      display: flex;
+      gap: 4px;
+      cursor: pointer;
+      font-weight: bold;
+    }
+    .menu-popup-btn:hover {
+      text-decoration: underline;
+    }
+
+    .rates-container {
+      display: flex;
+      p {
+        margin-left: 10px;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+// ------ RESTAURANT PAGE -------
+
+.carousel-restaurant {
+  width: 400px;
+  height: 300px;
+  overflow: hidden;
+
+  img {
+    width: 400px;
+    height: 300px;
+    object-fit: cover;
+  }
+}
+
+.back-home {
+  text-decoration: none;
+  color: #000;
+  outline: none;
+}
