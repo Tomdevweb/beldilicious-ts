@@ -17,7 +17,7 @@ export type Restaurant = {
   description: string;
   menu: {
     starters: { name: string; price: number }[];
-    main_courses: { name: string; price: number }[];
+    maincourses: { name: string; price: number }[];
     desserts: { name: string; price: number }[];
     drinks: { name: string; price: number }[];
   };

@@ -20,7 +20,7 @@
           "price": 6.75
         }
       ],
-      "main_courses": [
+      "maincourses": [
         {
           "name": "Tofu Grillé avec Légumes",
           "price": 12.5
@@ -97,7 +97,7 @@
           "price": 6.5
         }
       ],
-      "main_courses": [
+      "maincourses": [
         {
           "name": "Saumon Grillé avec Quinoa",
           "price": 14.0
@@ -174,7 +174,7 @@
           "price": 6.25
         }
       ],
-      "main_courses": [
+      "maincourses": [
         {
           "name": "Curry Épicé aux Pois Chiches",
           "price": 13.0
@@ -251,7 +251,7 @@
           "price": 6.75
         }
       ],
-      "main_courses": [
+      "maincourses": [
         {
           "name": "Champignons Portobello Grillés",
           "price": 11.75
@@ -328,7 +328,7 @@
           "price": 6.5
         }
       ],
-      "main_courses": [
+      "maincourses": [
         {
           "name": "Gratin de Chou-Fleur",
           "price": 11.5
@@ -405,7 +405,7 @@
           "price": 6.75
         }
       ],
-      "main_courses": [
+      "maincourses": [
         {
           "name": "Couscous au Pois Chiches",
           "price": 12.0
@@ -482,7 +482,7 @@
           "price": 7.0
         }
       ],
-      "main_courses": [
+      "maincourses": [
         {
           "name": "Riz Pilaf aux Légumes",
           "price": 11.5

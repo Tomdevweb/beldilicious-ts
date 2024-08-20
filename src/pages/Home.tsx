@@ -1,5 +1,5 @@
 import { signOut } from "firebase/auth";
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { useAppDispatch } from "../app/hooks";
 import restaurantsData from "../assets/data/restaurants.json";
 import locationIcon from "../assets/location-icon.svg";
@@ -7,12 +7,12 @@ import RestaurantCard from "../components/RestaurantCard";
 import { logoutUser } from "../features/authSlice";
 import { auth } from "../firebaseConfig";
 import "../styles/home.scss";
+import NavBar from "../components/NavBar";
 
 const Home: React.FC = () => {
   const dispatch = useAppDispatch();
   const [searchRestaurant, setSearchRestaurant] = useState("");
-  // on dit que "filteredRestaurant" est du même type que "restaurantsData", c'est-à-dire un tableau d'objets restaurants.
-  const [filteredRestaurant, setFilteredRestaurant] = useState<typeof restaurantsData>([]);
+  const [filteredRestaurant, setFilteredRestaurant] = useState(restaurantsData);
 
   const handleLogOut = () => {
     dispatch(logoutUser());
@@ -20,26 +20,34 @@ const Home: React.FC = () => {
   };
 
   const handleSearch = () => {
-    const filteredRestaurantByCity = restaurantsData.filter((restaurant) =>
-      restaurant.city.toLocaleLowerCase().includes(searchRestaurant.toLocaleLowerCase())
-    );
-    console.log(filteredRestaurantByCity);
-
-    setFilteredRestaurant(filteredRestaurantByCity);
+    if (searchRestaurant === "") {
+      setFilteredRestaurant(restaurantsData);
+    } else {
+      const filteredRestaurantByCity = restaurantsData.filter((restaurant) =>
+        restaurant.city.toLocaleLowerCase().includes(searchRestaurant.toLocaleLowerCase())
+      );
+      console.log(filteredRestaurantByCity);
+      setFilteredRestaurant(filteredRestaurantByCity);
+    }
   };
+
+  useEffect(() => {
+    handleSearch();
+  }, [searchRestaurant]);
+
   return (
     <div>
       <div className="header-container">
+        <NavBar />
         <div className="header">
           <h1 className="header-title">Your favorites local food delivered to your door</h1>
           <div className="search-container">
-            <label htmlFor="search-input">Find the best restaurants close to you</label>
             <div className="search-box">
               <img src={locationIcon} alt="location icon" className="location-icon" />
               <input
                 type="text"
                 id="search-input"
-                placeholder="Write your address"
+                placeholder="Find a restaurant in your city..."
                 onChange={(e) => setSearchRestaurant(e.target.value)}
               />
               <button onClick={handleSearch}>Search</button>

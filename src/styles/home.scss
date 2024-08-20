@@ -38,7 +38,6 @@ main {
 }
 
 .search-container {
-  background-color: #0097b2;
   width: 45%;
   height: 200px;
   padding: 40px 30px;
@@ -49,8 +48,6 @@ main {
     font-size: 16px;
   }
   .search-box {
-    border: 1px solid rgb(230, 229, 229);
-    border-radius: 50px;
     height: 60px;
     display: flex;
     justify-content: center;
@@ -66,14 +63,14 @@ main {
       padding: 5px;
       border: none;
       outline: none;
-      border-radius: 50px;
+      border-radius: 5px 0px 0px 5px;
       font-size: 16px;
     }
     button {
       width: 30%;
       border: none;
-      border-radius: 50px;
-      background-color: #49dd9d;
+      border-radius: 0px 5px 5px 0px;
+      background-color: #0097b2;
       color: #fff;
       font-size: 16px;
       font-weight: 600;
@@ -85,36 +82,13 @@ main {
 .nav {
   width: 100%;
   display: flex;
-  justify-content: space-between;
-  padding: 10px 50px;
-
-  .logo {
-    font-size: 30px;
-    font-weight: 600;
-  }
-  .nav-link-container {
-    width: 20%;
+  justify-content: end;
+  padding: 20px;
+  div {
     display: flex;
-    justify-content: space-between;
-    padding: 10px 10px;
-
-    div {
-      width: 48%;
-      cursor: pointer;
-      background-color: #fff;
-      padding: 2px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      border-radius: 2px;
-      font-size: 16px;
-      background-color: #fff;
-    }
-
-    .nav-account-link {
-      background-color: #000;
-      color: #fff;
-    }
+    width: 100%;
+    justify-content: end;
+    gap: 20px;
   }
 }
 

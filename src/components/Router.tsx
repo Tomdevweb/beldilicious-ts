@@ -6,12 +6,11 @@ import { auth } from "../firebaseConfig";
 import Authentication from "../pages/Authentication";
 import Home from "../pages/Home";
 import { CustomUser } from "../utils/types";
+import Restaurant from "../pages/Restaurant";
 
 const Router: React.FC = () => {
   const user = useAppSelector((state) => state.auth.user);
   const dispatch = useAppDispatch();
-
-  console.log(user);
 
   useEffect(() => {
     auth.onAuthStateChanged((authUser) => {
@@ -33,6 +32,7 @@ const Router: React.FC = () => {
       <Routes>
         <Route path="/" element={user ? <Navigate to="/home" /> : <Authentication />} />
         <Route path="/home" element={user ? <Home /> : <Navigate to="/" />} />
+        <Route path="/restaurant/:id" element={user ? <Restaurant /> : <Navigate to="/" />} />
         <Route path="*" element={<Navigate to={user ? "/home" : "/"} />} />
       </Routes>
     </BrowserRouter>
