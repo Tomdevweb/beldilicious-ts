@@ -12,7 +12,7 @@ import { useTogglePassword } from "../hooks/useTogglePassword";
 import "../styles/login-signup-form.scss";
 import { handleGoogleLogin } from "../utils/handleGoogleLogin";
 
-const Signup = () => {
+const Signup: React.FC = () => {
   const [email, setEmail] = useState("");
   const [username, setUsername] = useState("");
   const [password, setPassword] = useState("");
@@ -23,7 +23,11 @@ const Signup = () => {
   // Fonction createUser de Firebase
   const handleSignup = async () => {
     try {
-      const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+      const userCredential = await createUserWithEmailAndPassword(
+        auth,
+        email,
+        password
+      );
       const user = userCredential.user;
       await updateProfile(user, { displayName: username });
     } catch (error: unknown) {
@@ -76,11 +80,17 @@ const Signup = () => {
             value={password}
           />
           {shown ? (
-            <span onClick={ToggleShowPassword} className="icon icon--password-visibility">
+            <span
+              onClick={ToggleShowPassword}
+              className="icon icon--password-visibility"
+            >
               <img src={visibilityOffIcon} alt="password icon" />
             </span>
           ) : (
-            <span onClick={ToggleShowPassword} className="icon icon--password-visibility">
+            <span
+              onClick={ToggleShowPassword}
+              className="icon icon--password-visibility"
+            >
               <img src={visibilityOnIcon} alt="password icon" />
             </span>
           )}

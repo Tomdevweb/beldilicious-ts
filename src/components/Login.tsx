@@ -1,17 +1,17 @@
-import { useState } from "react";
-import "../styles/login-signup-form.scss";
 import { FirebaseError } from "firebase/app";
 import { signInWithEmailAndPassword } from "firebase/auth";
+import React, { useState } from "react";
 import emailIcon from "../assets/email-icon.svg";
 import googleIcon from "../assets/google-icon.svg";
 import passwordIcon from "../assets/password-icon.svg";
 import visibilityOffIcon from "../assets/visibility-off.svg";
 import visibilityOnIcon from "../assets/visibility-on.svg";
 import { auth } from "../firebaseConfig";
-import { handleGoogleLogin } from "../utils/handleGoogleLogin";
 import { useTogglePassword } from "../hooks/useTogglePassword";
+import "../styles/login-signup-form.scss";
+import { handleGoogleLogin } from "../utils/handleGoogleLogin";
 
-const Login = () => {
+const Login: React.FC = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const { shown, ToggleShowPassword } = useTogglePassword();
@@ -56,11 +56,17 @@ const Login = () => {
             value={password}
           />
           {shown ? (
-            <span onClick={ToggleShowPassword} className="icon icon--password-visibility">
+            <span
+              onClick={ToggleShowPassword}
+              className="icon icon--password-visibility"
+            >
               <img src={visibilityOffIcon} alt="password icon" />
             </span>
           ) : (
-            <span onClick={ToggleShowPassword} className="icon icon--password-visibility">
+            <span
+              onClick={ToggleShowPassword}
+              className="icon icon--password-visibility"
+            >
               <img src={visibilityOnIcon} alt="password icon" />
             </span>
           )}
