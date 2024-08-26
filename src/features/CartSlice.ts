@@ -16,10 +16,12 @@ const cartSlice = createSlice({
   initialState,
   reducers: {
     addToCart: (state, action: PayloadAction<CartItem>) => {
-      const exisitingItemIndex =
-        state.items.findIndex((item) => item.id === action.payload.id) || 0;
+      console.log("ACTION:::", action);
+      const exisitingItemIndex = state.items.findIndex(
+        (item) => item.id === action.payload.id
+      );
 
-      if (exisitingItemIndex) {
+      if (exisitingItemIndex >= 0) {
         state.items[exisitingItemIndex].quantity += action.payload.quantity;
       } else {
         state.items.push(action.payload);
@@ -50,13 +52,43 @@ const cartSlice = createSlice({
     //   }
     // },
 
-    removeFromCart: (state, action: PayloadAction<CartItem>) => {
-      state.items = state.items.filter(
-        (item) => item.name !== action.payload.name
-      );
+    removeFromCart: (state, action: PayloadAction<string>) => {
+      const itemId = action.payload;
+      state.items = state.items.filter((item) => item.id !== itemId);
+    },
+
+    incrementQuantity: (state, action: PayloadAction<string>) => {
+      const itemId = action.payload;
+      state.items = state.items.map((item) => {
+        if (item.id === itemId) {
+          item.quantity++;
+        }
+        return item;
+      });
+    },
+
+    decrementQuantity: (state, action: PayloadAction<string>) => {
+      const itemId = action.payload;
+      // Update quantities
+      state.items = state.items.map((item) => {
+        if (item.id === itemId) {
+          item.quantity--;
+        }
+        return item;
+      });
+      // Remove if quantity is <= 0
+      state.items = state.items.filter((item) => {
+        // return true ou false pour savoir si on va garder le produit
+        return item.quantity > 0;
+      });
     },
   },
 });
 
-export const { addToCart, removeFromCart } = cartSlice.actions;
+export const {
+  addToCart,
+  removeFromCart,
+  incrementQuantity,
+  decrementQuantity,
+} = cartSlice.actions;
 export default cartSlice.reducer;
