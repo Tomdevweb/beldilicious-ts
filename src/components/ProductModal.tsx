@@ -17,6 +17,7 @@ const ProductModal: React.FC<ProductModalProps> = ({ product, closeModal }) => {
 
   const addProductToCart = () => {
     dispatch(addToCart({ ...product, quantity }));
+    closeModal();
   };
 
   const increaseQuantity = () => {
@@ -48,7 +49,12 @@ const ProductModal: React.FC<ProductModalProps> = ({ product, closeModal }) => {
             <button className="modal-quantity-btn" onClick={decreaseQuantity}>
               -
             </button>
-            <input className="modal-quantity-input" type="text" value={quantity} />
+            <input
+              className="modal-quantity-input"
+              type="text"
+              value={quantity}
+              readOnly
+            />
             <button className="modal-quantity-btn" onClick={increaseQuantity}>
               +
             </button>

@@ -12,7 +12,7 @@ const ProductCard: React.FC<Props> = ({ product, onShowModal }) => {
   return (
     <Card hoverable onClick={onShowModal}>
       <Meta title={product.name} />
-      <span>{product.price}</span>
+      <span>{product.price} €</span>
     </Card>
   );
 };
