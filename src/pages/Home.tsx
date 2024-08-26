@@ -26,7 +26,9 @@ const Home: React.FC = () => {
       setFilteredRestaurant(restaurantsData);
     } else {
       const filteredRestaurantByCity = restaurantsData.filter((restaurant) =>
-        restaurant.city.toLocaleLowerCase().includes(searchRestaurant.toLocaleLowerCase())
+        restaurant.city
+          .toLocaleLowerCase()
+          .includes(searchRestaurant.toLocaleLowerCase())
       );
       console.log(filteredRestaurantByCity);
       setFilteredRestaurant(filteredRestaurantByCity);
@@ -43,10 +45,16 @@ const Home: React.FC = () => {
       <div className="header-container">
         <NavBar />
         <div className="header">
-          <h1 className="header-title">Your favorites local food delivered to your door</h1>
+          <h1 className="header-title">
+            Your favorites local food delivered to your door
+          </h1>
           <div className="search-container">
             <div className="search-box">
-              <img src={locationIcon} alt="location icon" className="location-icon" />
+              <img
+                src={locationIcon}
+                alt="location icon"
+                className="location-icon"
+              />
               <input
                 type="text"
                 id="search-input"
