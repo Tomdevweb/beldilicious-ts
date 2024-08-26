@@ -22,3 +22,8 @@ export type Restaurant = {
     drinks: { name: string; price: number }[];
   };
 };
+
+export type Product = {
+  name: string;
+  price: number;
+};

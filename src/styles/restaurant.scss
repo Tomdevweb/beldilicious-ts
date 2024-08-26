@@ -4,3 +4,196 @@
   flex-direction: column;
   gap: 50px;
 }
+
+header {
+  display: flex;
+  padding: 50px;
+  img {
+    width: 450px;
+    height: 280px;
+    object-fit: cover;
+    border-radius: 5px;
+  }
+
+  .restaurant-details {
+    padding: 5px 20px;
+    width: 63%;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    h1 {
+      font-size: 40px;
+    }
+
+    p {
+      font-size: 14px;
+    }
+  }
+}
+
+.products-list {
+  background-color: rgba(249, 250, 250, 255);
+  padding: 40px;
+  width: 100%;
+  display: flex;
+  gap: 2rem;
+}
+
+.product-card {
+  display: flex;
+  flex-direction: row-reverse;
+  width: 500px;
+  cursor: pointer;
+
+  .ant-card-cover {
+    width: 40%;
+    height: 100%;
+    padding: 20px;
+    align-self: center;
+
+    img {
+      height: 100%;
+      object-fit: cover;
+      border-radius: 2px;
+    }
+  }
+
+  .ant-card-meta-title {
+    white-space: normal;
+  }
+  .ant-card-body {
+    width: 50%;
+    padding: 20px 10px;
+  }
+
+  .ant-card-actions {
+    border-radius: 5px;
+    border: 1px solid rgb(228, 228, 228);
+    margin: 20px;
+
+    li {
+      align-self: center;
+    }
+  }
+
+  .ant-card-actions:hover {
+    border: 1px solid rgb(192, 192, 192);
+  }
+}
+
+.product-card:hover {
+  box-shadow: 0px 10px 15px 3px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s linear;
+}
+
+body.active-modal {
+  overflow-y: hidden;
+}
+
+.modal-container,
+.product-overlay {
+  width: 100vw;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+}
+
+.modal-container {
+  overflow-y: auto;
+  .modal {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 1.4;
+    background: #f1f1f1;
+    max-width: 550px;
+    min-height: 650px;
+  }
+  .modal-content {
+    padding: 14px 28px;
+  }
+  .close-modal {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    padding: 5px 7px;
+  }
+
+  .modal-product-img img {
+    width: 100%;
+    height: 350px;
+    object-fit: cover;
+  }
+
+  .close-modal {
+    position: absolute;
+    border-radius: 15px;
+    cursor: pointer;
+  }
+
+  .modal-product-details {
+    margin-bottom: 20px;
+    overflow-y: auto;
+  }
+
+  .modal-add-product-container {
+    position: absolute;
+    width: 100%;
+    top: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 20%;
+    border-top: 1px solid lightgrey;
+    gap: 20px;
+    .modal-input-container {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      gap: 5px;
+    }
+
+    .modal-quantity-input {
+      border: none;
+      text-align: center;
+      font-weight: 700;
+      font-size: 25px;
+      background: none;
+      width: 35%;
+    }
+
+    .modal-quantity-btn {
+      width: 30px;
+      font-size: 20px;
+      border-radius: 50%;
+      cursor: pointer;
+    }
+    .modal-add-to-cart-btn {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+
+      button {
+        width: 80%;
+        height: 50px;
+        border-radius: 10px;
+        font-size: 14px;
+        border: 1px solid black;
+        cursor: pointer;
+      }
+
+      button:hover {
+        background-color: #e5e5e5;
+      }
+    }
+  }
+}
+
+.product-overlay {
+  background: rgba(49, 49, 49, 0.8);
+}
