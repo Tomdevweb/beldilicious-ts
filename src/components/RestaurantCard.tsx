@@ -1,9 +1,14 @@
 import { Card } from "antd";
+import React from "react";
 import Meta from "antd/es/card/Meta";
 import { Link } from "react-router-dom";
-import { Restaurant } from "../utils/types";
+import { Restaurant } from "../types/types";
 
-const RestaurantCard: React.FC<{ restaurant: Restaurant }> = ({ restaurant }) => {
+type Props = {
+  restaurant: Restaurant;
+};
+
+const RestaurantCard: React.FC<Props> = ({ restaurant }) => {
   return (
     <Link className="card" to={`/restaurant/${restaurant.id}`}>
       <Card hoverable>

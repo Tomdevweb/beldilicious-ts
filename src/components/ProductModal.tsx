@@ -1,5 +1,7 @@
-import React from "react";
-import { Product } from "../utils/types";
+import React, { useState } from "react";
+import { Product } from "../types/types";
+import { addToCart } from "../features/CartSlice";
+import { useAppDispatch } from "../app/hooks";
 
 type ProductModalProps = {
   product: Product;
@@ -7,6 +9,21 @@ type ProductModalProps = {
 };
 
 const ProductModal: React.FC<ProductModalProps> = ({ product, closeModal }) => {
+  const dispatch = useAppDispatch();
+  const [quantity, setQuantity] = useState(1);
+
+  const addProductToCart = () => {
+    dispatch(addToCart({ ...product, quantity }));
+  };
+
+  const increaseQuantity = () => {
+    setQuantity((prevQuantity) => prevQuantity + 1);
+  };
+
+  const decreaseQuantity = () => {
+    setQuantity((prevQuantity) => Math.max(1, prevQuantity - 1));
+  };
+
   return (
     <div className="modal-container">
       <div className="product-overlay" onClick={closeModal}></div>
@@ -25,12 +42,16 @@ const ProductModal: React.FC<ProductModalProps> = ({ product, closeModal }) => {
         </div>
         <div className="modal-add-product-container">
           <div className="modal-input-container">
-            <button className="modal-quantity-btn">-</button>
-            <input className="modal-quantity-input" type="text" value={"1"} />
-            <button className="modal-quantity-btn">+</button>
+            <button className="modal-quantity-btn" onClick={decreaseQuantity}>
+              -
+            </button>
+            <input className="modal-quantity-input" type="text" value={quantity} />
+            <button className="modal-quantity-btn" onClick={increaseQuantity}>
+              +
+            </button>
           </div>
           <div className="modal-add-to-cart-btn">
-            <button>Ajouter au panier</button>
+            <button onClick={addProductToCart}>Ajouter au panier</button>
           </div>
         </div>
       </div>

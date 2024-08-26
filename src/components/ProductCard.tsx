@@ -1,7 +1,7 @@
 import Card from "antd/es/card/Card";
 import Meta from "antd/es/card/Meta";
 import React from "react";
-import { Product } from "../utils/types";
+import { Product } from "../types/types";
 
 type Props = {
   product: Product;

@@ -5,7 +5,7 @@ import { loginUser, setLoading } from "../features/authSlice";
 import { auth } from "../firebaseConfig";
 import Authentication from "../pages/Authentication";
 import Home from "../pages/Home";
-import { CustomUser } from "../utils/types";
+import { CustomUser } from "../types/types";
 import Restaurant from "../pages/Restaurant";
 
 const Router: React.FC = () => {

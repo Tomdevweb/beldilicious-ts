@@ -3,16 +3,16 @@ import { useParams } from "react-router-dom";
 import restaurantsData from "../assets/data/restaurants.json";
 import { Segmented } from "antd";
 import "../styles/restaurant.scss";
-import { Product } from "../utils/types";
+import { Product } from "../types/types";
 import ProductCard from "../components/ProductCard";
 import ProductModal from "../components/ProductModal";
 
-const Restaurant = () => {
+const Restaurant: React.FC = () => {
   const param = useParams();
   const restaurant = restaurantsData.find((restaurant) => restaurant.id === param.id);
   const [selectedSegment, setSelectedSegment] = useState("Entrées");
   const [isModalVisible, setIsModalVisible] = useState(false);
-  const [currentProductInModal, sectCurrentProductInModal] = useState<Product | null>(null);
+  const [currentProductInModal, setCurrentProductInModal] = useState<Product | null>(null);
 
   const handleSegmentChange = (value: string) => {
     setSelectedSegment(value);
@@ -34,7 +34,7 @@ const Restaurant = () => {
   const filteredProducts = segmentMap[selectedSegment];
 
   const openProductModal = (product: Product) => {
-    sectCurrentProductInModal(product);
+    setCurrentProductInModal(product);
     setIsModalVisible(true);
   };
 
@@ -56,17 +56,10 @@ const Restaurant = () => {
       </div>
       <div>
         {filteredProducts?.map((product, index) => (
-          <div>
-            <div>
-              <ProductCard
-                key={index}
-                product={product}
-                onShowModal={() => openProductModal(product)}
-              />
-            </div>
-            <div>
-              {isModalVisible && <ProductModal product={product} closeModal={closeProductModal} />}
-            </div>
+          <div key={index}>
+            <ProductCard product={product} onShowModal={() => openProductModal(product)} />
+
+            {isModalVisible && <ProductModal product={product} closeModal={closeProductModal} />}
           </div>
         ))}
       </div>

@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { AuthState, CustomUser } from "../utils/types";
+import { AuthState, CustomUser } from "../types/types";
 // import { User } from "firebase/auth";
 
 // Type User = type par défaut Firebase pour représenter un utilisateur authentifié.
@@ -23,7 +23,7 @@ const authSlice = createSlice({
       state.user = null;
       state.isLoading = false;
     },
-    setLoading: (state, action: PayloadAction<Boolean>) => {
+    setLoading: (state, action: PayloadAction<boolean>) => {
       state.isLoading = action.payload;
     },
   },

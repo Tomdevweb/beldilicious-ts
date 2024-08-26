@@ -8,68 +8,83 @@
     "menu": {
       "starters": [
         {
+          "id": "101-1",
           "name": "Salade d'Avocat",
           "price": 7.5
         },
         {
+          "id": "101-2",
           "name": "Poivrons Farcis au Quinoa",
           "price": 8.0
         },
         {
+          "id": "101-3",
           "name": "Trempette aux Épinards et Artichauts",
           "price": 6.75
         }
       ],
       "maincourses": [
         {
+          "id": "101-4",
           "name": "Tofu Grillé avec Légumes",
           "price": 12.5
         },
         {
+          "id": "101-5",
           "name": "Bol Bouddha Végétalien",
           "price": 11.0
         },
         {
+          "id": "101-6",
           "name": "Ragoût de Lentilles et Patates Douces",
           "price": 13.0
         },
         {
+          "id": "101-7",
           "name": "Sauté de Légumes avec Riz Complet",
           "price": 12.0
         }
       ],
       "desserts": [
         {
+          "id": "101-8",
           "name": "Pudding de Chia",
           "price": 5.0
         },
         {
+          "id": "101-9",
           "name": "Bol d'Açaï aux Baies",
           "price": 6.5
         },
         {
+          "id": "101-10",
           "name": "Mousse au Chocolat Végétalienne",
           "price": 7.0
         }
       ],
       "drinks": [
         {
+          "id": "101-11",
           "name": "Smoothie Détox Vert",
           "price": 4.5
         },
         {
+          "id": "101-12",
           "name": "Thé à la Menthe Fraîche",
           "price": 3.0
         },
         {
+          "id": "101-13",
           "name": "Eau Citronnée au Concombre",
           "price": 2.5
         },
         {
+          "id": "101-14",
           "name": "Gingembre Bio Pétillant",
           "price": 3.5
         },
         {
+          "id": "101-15",
           "name": "Kombucha",
           "price": 5.0
         }
@@ -85,68 +100,83 @@
     "menu": {
       "starters": [
         {
+          "id": "102-1",
           "name": "Salade de Kale et Noix",
           "price": 7.0
         },
         {
+          "id": "102-2",
           "name": "Nouilles de Courgette au Pesto",
           "price": 8.5
         },
         {
+          "id": "102-3",
           "name": "Soupe de Carottes et Gingembre",
           "price": 6.5
         }
       ],
       "maincourses": [
         {
+          "id": "102-4",
           "name": "Saumon Grillé avec Quinoa",
           "price": 14.0
         },
         {
+          "id": "102-5",
           "name": "Sauté de Lentilles et Légumes",
           "price": 12.0
         },
         {
+          "id": "102-6",
           "name": "Risotto de Courge Butternut Rôtie",
           "price": 13.5
         },
         {
+          "id": "102-7",
           "name": "Sauté de Tofu et Brocoli",
           "price": 11.5
         }
       ],
       "desserts": [
         {
+          "id": "102-8",
           "name": "Brownie Végétalien Cru",
           "price": 6.0
         },
         {
+          "id": "102-9",
           "name": "Yaourt de Coco avec Baies",
           "price": 5.5
         },
         {
+          "id": "102-10",
           "name": "Boules Énergie aux Dattes et Amandes",
           "price": 4.75
         }
       ],
       "drinks": [
         {
+          "id": "102-11",
           "name": "Kombucha",
           "price": 4.0
         },
         {
+          "id": "102-12",
           "name": "Jus Pressé à Froid",
           "price": 5.0
         },
         {
+          "id": "102-13",
           "name": "Thé Glacé aux Herbes",
           "price": 3.5
         },
         {
+          "id": "102-14",
           "name": "Latte au Matcha",
           "price": 4.75
         },
         {
+          "id": "102-15",
           "name": "Eau Pétillante au Citron",
           "price": 2.5
         }
@@ -162,68 +192,83 @@
     "menu": {
       "starters": [
         {
+          "id": "103-1",
           "name": "Carpaccio de Betterave",
           "price": 7.75
         },
         {
+          "id": "103-2",
           "name": "Sushi Végétalien",
           "price": 9.0
         },
         {
+          "id": "103-3",
           "name": "Soupe de Brocoli",
           "price": 6.25
         }
       ],
       "maincourses": [
         {
+          "id": "103-4",
           "name": "Curry Épicé aux Pois Chiches",
           "price": 13.0
         },
         {
+          "id": "103-5",
           "name": "Steak de Chou-fleur",
           "price": 12.5
         },
         {
+          "id": "103-6",
           "name": "Burger de Quinoa et Haricots Noirs",
           "price": 11.75
         },
         {
+          "id": "103-7",
           "name": "Poivrons Farcis",
           "price": 12.0
         }
       ],
       "desserts": [
         {
+          "id": "103-8",
           "name": "Sorbet à la Mangue",
           "price": 5.5
         },
         {
+          "id": "103-9",
           "name": "Biscuits à la Farine d'Amande",
           "price": 4.5
         },
         {
+          "id": "103-10",
           "name": "Barres d'Avoine aux Myrtilles",
           "price": 6.0
         }
       ],
       "drinks": [
         {
+          "id": "103-11",
           "name": "Latte au Curcuma et Gingembre",
           "price": 4.75
         },
         {
+          "id": "103-12",
           "name": "Thé Matcha Glacé",
           "price": 4.25
         },
         {
+          "id": "103-13",
           "name": "Smoothie Ananas et Menthe",
           "price": 5.0
         },
         {
+          "id": "103-14",
           "name": "Jus Vert Détox",
           "price": 5.5
         },
         {
+          "id": "103-15",
           "name": "Infusion de Plantes Glacée",
           "price": 3.25
         }
@@ -239,68 +284,83 @@
     "menu": {
       "starters": [
         {
+          "id": "104-1",
           "name": "Bruschetta à la Tomate et Basilic",
           "price": 6.5
         },
         {
+          "id": "104-2",
           "name": "Soupe de Citrouille Rôtie",
           "price": 7.25
         },
         {
+          "id": "104-3",
           "name": "Gaspacho de Concombre et Avocat",
           "price": 6.75
         }
       ],
       "maincourses": [
         {
+          "id": "104-4",
           "name": "Champignons Portobello Grillés",
           "price": 11.75
         },
         {
+          "id": "104-5",
           "name": "Patates Douces Farcies",
           "price": 12.0
         },
         {
+          "id": "104-6",
           "name": "Pad Thaï Végétalien",
           "price": 13.25
         },
         {
+          "id": "104-7",
           "name": "Tacos de Chou-fleur Rôti",
           "price": 11.5
         }
       ],
       "desserts": [
         {
+          "id": "104-8",
           "name": "Gâteau aux Carottes avec Glaçage de Noix de Cajou",
           "price": 5.75
         },
         {
+          "id": "104-9",
           "name": "Salade de Fruits à la Menthe",
           "price": 4.75
         },
         {
+          "id": "104-10",
           "name": "Crumble aux Pommes et Noix",
           "price": 6.25
         }
       ],
       "drinks": [
         {
+          "id": "104-11",
           "name": "Infusion de Plantes",
           "price": 3.5
         },
         {
+          "id": "104-12",
           "name": "Jus Vert Bio",
           "price": 5.25
         },
         {
+          "id": "104-13",
           "name": "Limonade à la Lavande",
           "price": 4.0
         },
         {
+          "id": "104-14",
           "name": "Latte au Chai",
           "price": 4.5
         },
         {
+          "id": "104-15",
           "name": "Refroidisseur au Concombre et Menthe",
           "price": 3.75
         }
@@ -316,68 +376,83 @@
     "menu": {
       "starters": [
         {
+          "id": "105-1",
           "name": "Salade de Quinoa et Grenade",
           "price": 7.25
         },
         {
+          "id": "105-2",
           "name": "Houmous de Betterave",
           "price": 6.75
         },
         {
+          "id": "105-3",
           "name": "Soupe de Patate Douce",
           "price": 6.5
         }
       ],
       "maincourses": [
         {
+          "id": "105-4",
           "name": "Gratin de Chou-Fleur",
           "price": 11.5
         },
         {
+          "id": "105-5",
           "name": "Lasagnes de Courgettes",
           "price": 12.75
         },
         {
+          "id": "105-6",
           "name": "Bol Poké au Saumon",
           "price": 14.0
         },
         {
+          "id": "105-7",
           "name": "Couscous Végétarien",
           "price": 13.0
         }
       ],
       "desserts": [
         {
+          "id": "105-8",
           "name": "Tartelette au Citron",
           "price": 5.5
         },
         {
+          "id": "105-9",
           "name": "Crème Brûlée à la Vanille",
           "price": 6.0
         },
         {
+          "id": "105-10",
           "name": "Salade de Fruits Exotiques",
           "price": 5.75
         }
       ],
       "drinks": [
         {
+          "id": "105-11",
           "name": "Thé Glacé à la Menthe",
           "price": 3.75
         },
         {
+          "id": "105-12",
           "name": "Smoothie Tropical",
           "price": 4.5
         },
         {
+          "id": "105-13",
           "name": "Jus d'Orange Fraîchement Pressé",
           "price": 3.5
         },
         {
+          "id": "105-14",
           "name": "Limonade Maison",
           "price": 3.25
         },
         {
+          "id": "105-15",
           "name": "Kombucha au Gingembre",
           "price": 4.25
         }
@@ -393,68 +468,83 @@
     "menu": {
       "starters": [
         {
+          "id": "106-1",
           "name": "Taboulé de Quinoa",
           "price": 7.0
         },
         {
+          "id": "106-2",
           "name": "Tartare d'Avocat",
           "price": 7.75
         },
         {
+          "id": "106-3",
           "name": "Velouté de Champignons",
           "price": 6.75
         }
       ],
       "maincourses": [
         {
+          "id": "106-4",
           "name": "Couscous au Pois Chiches",
           "price": 12.0
         },
         {
+          "id": "106-5",
           "name": "Gratin de Légumes",
           "price": 11.75
         },
         {
+          "id": "106-6",
           "name": "Tajine Végétarien",
           "price": 13.5
         },
         {
+          "id": "106-7",
           "name": "Ragoût de Haricots Blancs",
           "price": 12.5
         }
       ],
       "desserts": [
         {
+          "id": "106-8",
           "name": "Mousse au Chocolat Noir",
           "price": 5.5
         },
         {
+          "id": "106-9",
           "name": "Tarte aux Fruits Rouges",
           "price": 6.25
         },
         {
+          "id": "106-10",
           "name": "Sorbet à la Mangue",
           "price": 5.25
         }
       ],
       "drinks": [
         {
+          "id": "106-11",
           "name": "Thé Vert à la Menthe",
           "price": 3.0
         },
         {
+          "id": "106-12",
           "name": "Jus de Grenade",
           "price": 4.5
         },
         {
+          "id": "106-13",
           "name": "Smoothie Détox",
           "price": 4.75
         },
         {
+          "id": "106-14",
           "name": "Limonade au Miel",
           "price": 3.5
         },
         {
+          "id": "106-15",
           "name": "Infusion au Gingembre",
           "price": 3.25
         }
@@ -470,68 +560,83 @@
     "menu": {
       "starters": [
         {
+          "id": "107-1",
           "name": "Salade d'Epinards et Noix",
           "price": 7.5
         },
         {
+          "id": "107-2",
           "name": "Soupe de Lentilles",
           "price": 6.5
         },
         {
+          "id": "107-3",
           "name": "Rouleaux de Printemps Végétariens",
           "price": 7.0
         }
       ],
       "maincourses": [
         {
+          "id": "107-4",
           "name": "Riz Pilaf aux Légumes",
           "price": 11.5
         },
         {
+          "id": "107-5",
           "name": "Tofu Grillé avec Riz Brun",
           "price": 12.0
         },
         {
+          "id": "107-6",
           "name": "Curry de Légumes au Lait de Coco",
           "price": 13.0
         },
         {
+          "id": "107-7",
           "name": "Risotto aux Champignons",
           "price": 14.0
         }
       ],
       "desserts": [
         {
+          "id": "107-8",
           "name": "Gâteau au Chocolat et Noisettes",
           "price": 5.5
         },
         {
+          "id": "107-9",
           "name": "Crème de Coco et Mangue",
           "price": 6.0
         },
         {
+          "id": "107-10",
           "name": "Panna Cotta au Citron Vert",
           "price": 5.75
         }
       ],
       "drinks": [
         {
+          "id": "107-11",
           "name": "Smoothie aux Fruits Rouges",
           "price": 4.5
         },
         {
+          "id": "107-12",
           "name": "Thé Glacé au Citron",
           "price": 3.5
         },
         {
+          "id": "107-13",
           "name": "Eau de Coco",
           "price": 3.75
         },
         {
+          "id": "107-14",
           "name": "Infusion de Verveine",
           "price": 3.25
         },
         {
+          "id": "107-15",
           "name": "Kombucha à la Menthe",
           "price": 4.0
         }

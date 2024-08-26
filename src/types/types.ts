@@ -6,7 +6,7 @@ export type CustomUser = {
 
 export type AuthState = {
   user: CustomUser | null;
-  isLoading: Boolean;
+  isLoading: boolean;
 };
 
 export type Restaurant = {
@@ -26,4 +26,5 @@ export type Restaurant = {
 export type Product = {
   name: string;
   price: number;
+  id: string;
 };

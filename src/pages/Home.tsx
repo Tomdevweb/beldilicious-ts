@@ -19,6 +19,8 @@ const Home: React.FC = () => {
     signOut(auth);
   };
 
+  // Faire un fetch pour evolution du code si on branche de la vraie data. FetchRestaurant / Product (faire un loading 1 sec)
+
   const handleSearch = () => {
     if (searchRestaurant === "") {
       setFilteredRestaurant(restaurantsData);
@@ -30,9 +32,10 @@ const Home: React.FC = () => {
       setFilteredRestaurant(filteredRestaurantByCity);
     }
   };
-
+  // Effect triggered when search change
   useEffect(() => {
     handleSearch();
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchRestaurant]);
 
   return (
