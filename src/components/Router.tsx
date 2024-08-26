@@ -7,6 +7,7 @@ import Authentication from "../pages/Authentication";
 import Home from "../pages/Home";
 import { CustomUser } from "../types/types";
 import Restaurant from "../pages/Restaurant";
+import Cart from "../pages/Cart";
 
 const Router: React.FC = () => {
   const user = useAppSelector((state) => state.auth.user);
@@ -30,9 +31,17 @@ const Router: React.FC = () => {
   return (
     <BrowserRouter>
       <Routes>
-        <Route path="/" element={user ? <Navigate to="/home" /> : <Authentication />} />
+        <Route
+          path="/"
+          element={user ? <Navigate to="/home" /> : <Authentication />}
+        />
         <Route path="/home" element={user ? <Home /> : <Navigate to="/" />} />
-        <Route path="/restaurant/:id" element={user ? <Restaurant /> : <Navigate to="/" />} />
+        <Route
+          path="/restaurant/:id"
+          element={user ? <Restaurant /> : <Navigate to="/" />}
+        />
+
+        <Route path="/cart" element={user ? <Cart /> : <Navigate to="/" />} />
         <Route path="*" element={<Navigate to={user ? "/home" : "/"} />} />
       </Routes>
     </BrowserRouter>

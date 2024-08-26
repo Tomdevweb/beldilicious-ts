@@ -6,13 +6,17 @@ import "../styles/restaurant.scss";
 import { Product } from "../types/types";
 import ProductCard from "../components/ProductCard";
 import ProductModal from "../components/ProductModal";
+import NavBar from "../components/NavBar";
 
 const Restaurant: React.FC = () => {
   const param = useParams();
-  const restaurant = restaurantsData.find((restaurant) => restaurant.id === param.id);
+  const restaurant = restaurantsData.find(
+    (restaurant) => restaurant.id === param.id
+  );
   const [selectedSegment, setSelectedSegment] = useState("Entrées");
   const [isModalVisible, setIsModalVisible] = useState(false);
-  const [currentProductInModal, setCurrentProductInModal] = useState<Product | null>(null);
+  const [currentProductInModal, setCurrentProductInModal] =
+    useState<Product | null>(null);
 
   const handleSegmentChange = (value: string) => {
     setSelectedSegment(value);
@@ -44,6 +48,7 @@ const Restaurant: React.FC = () => {
 
   return (
     <div className="restaurant-main-container">
+      <NavBar />
       <h1>{restaurant?.name}</h1>
       <p>{restaurant?.description}</p>
       <div>
@@ -57,11 +62,18 @@ const Restaurant: React.FC = () => {
       <div>
         {filteredProducts?.map((product, index) => (
           <div key={index}>
-            <ProductCard product={product} onShowModal={() => openProductModal(product)} />
-
-            {isModalVisible && <ProductModal product={product} closeModal={closeProductModal} />}
+            <ProductCard
+              product={product}
+              onShowModal={() => openProductModal(product)}
+            />
           </div>
         ))}
+        {isModalVisible && currentProductInModal !== null && (
+          <ProductModal
+            product={currentProductInModal}
+            closeModal={closeProductModal}
+          />
+        )}
       </div>
     </div>
   );
