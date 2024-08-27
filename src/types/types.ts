@@ -4,11 +4,6 @@ export type CustomUser = {
   email: string | null;
 };
 
-export type AuthState = {
-  user: CustomUser | null;
-  isLoading: boolean;
-};
-
 export type Restaurant = {
   id: string;
   name: string;

@@ -1,9 +1,13 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { AuthState, CustomUser } from "../types/types";
+import { CustomUser } from "../types/types";
 // import { User } from "firebase/auth";
 
 // Type User = type par défaut Firebase pour représenter un utilisateur authentifié.
 // Utilisation d'un type custom CustomUser au lieu de User de firebase a trop de propriétés attendue dont on a pas besoin et cela cause des erreurs de typage dans mon router (voir types.ts)
+export type AuthState = {
+  user: CustomUser | null;
+  isLoading: boolean;
+};
 
 const initialState: AuthState = {
   user: null,
