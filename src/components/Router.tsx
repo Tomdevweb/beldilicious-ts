@@ -11,6 +11,7 @@ import { CustomUser } from "../types/types";
 
 const Router: React.FC = () => {
   const user = useAppSelector((state) => state.auth.user);
+
   const dispatch = useAppDispatch();
 
   useEffect(() => {
@@ -25,7 +26,14 @@ const Router: React.FC = () => {
         dispatch(setLoading(false));
       }
     });
-  }, [dispatch]);
+    // eslint-disable-next-line
+  }, []);
+
+  // Don't render the router before redux-persist has rehydrated the store
+  const rehydrated = useAppSelector((state) => state._persist.rehydrated);
+  if (!rehydrated) {
+    return <div>Loading app...</div>;
+  }
 
   return (
     <BrowserRouter>

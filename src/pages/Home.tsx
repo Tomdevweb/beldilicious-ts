@@ -10,8 +10,6 @@ import NavBar from "../components/NavBar";
 import { Restaurant } from "../types/types";
 import { fetchRestaurants } from "../features/restaurants/fetchRestaurants";
 
-// TODO
-localStorage.clear();
 const Home: React.FC = () => {
   const dispatch = useAppDispatch();
 
