@@ -37,7 +37,6 @@ const Home: React.FC = () => {
   // Effect triggered when search change
   useEffect(() => {
     handleSearch();
-    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [searchRestaurant]);
 
   return (

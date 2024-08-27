@@ -15,6 +15,7 @@ const Login: React.FC = () => {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const { shown, ToggleShowPassword } = useTogglePassword();
+
   const handleLogin = async () => {
     try {
       await signInWithEmailAndPassword(auth, email, password);

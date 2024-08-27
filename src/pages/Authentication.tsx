@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 import { useState } from "react";
 import logo from "../assets/logo.png";
 import Login from "../components/Login";
@@ -21,11 +22,13 @@ const Auth: React.FC = () => {
           <span>
             {active === "login" ? (
               <>
-                Don't have an account? <button onClick={handleChange}>Sign Up</button>
+                <span>Don't have an account?</span>{" "}
+                <button onClick={handleChange}>Sign Up</button>
               </>
             ) : (
               <>
-                Have an account? <button onClick={handleChange}>Login</button>
+                <span>Have an account?</span>{" "}
+                <button onClick={handleChange}>Login</button>
               </>
             )}
           </span>

@@ -4,10 +4,10 @@ import { useAppDispatch, useAppSelector } from "../app/hooks";
 import { loginUser, setLoading } from "../features/authSlice";
 import { auth } from "../firebaseConfig";
 import Authentication from "../pages/Authentication";
-import Home from "../pages/Home";
-import { CustomUser } from "../types/types";
-import Restaurant from "../pages/Restaurant";
 import Cart from "../pages/Cart";
+import Home from "../pages/Home";
+import Restaurant from "../pages/Restaurant";
+import { CustomUser } from "../types/types";
 
 const Router: React.FC = () => {
   const user = useAppSelector((state) => state.auth.user);
@@ -16,7 +16,6 @@ const Router: React.FC = () => {
   useEffect(() => {
     auth.onAuthStateChanged((authUser) => {
       if (authUser) {
-        console.log(authUser);
         const customUser: CustomUser = {
           uid: authUser.uid,
           displayName: authUser.displayName,

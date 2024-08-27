@@ -1,4 +1,3 @@
-import React from "react";
 import { useAppDispatch, useAppSelector } from "../app/hooks";
 import {
   decrementQuantity,
@@ -9,7 +8,7 @@ import {
 const Cart = () => {
   const cart = useAppSelector((state) => state.cart);
   const dispatch = useAppDispatch();
-
+  console.log("CART:::", cart);
   return (
     <div>
       {cart.items.map((item) => (

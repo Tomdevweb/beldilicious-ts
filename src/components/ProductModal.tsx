@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Product } from "../types/types";
 import { addToCart } from "../features/CartSlice";
-import { useAppDispatch, useAppSelector } from "../app/hooks";
+import { useAppDispatch } from "../app/hooks";
 
 type ProductModalProps = {
   product: Product;
@@ -11,9 +11,6 @@ type ProductModalProps = {
 const ProductModal: React.FC<ProductModalProps> = ({ product, closeModal }) => {
   const dispatch = useAppDispatch();
   const [quantity, setQuantity] = useState(1);
-  const cart = useAppSelector((state) => state.cart);
-
-  console.log("CART STATE:::", cart);
 
   const addProductToCart = () => {
     dispatch(addToCart({ ...product, quantity }));
