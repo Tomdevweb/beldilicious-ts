@@ -13,6 +13,9 @@ const Restaurant: React.FC = () => {
   const restaurant = restaurantsData.find(
     (restaurant) => restaurant.id === param.id
   );
+
+  const idNotFound = !!restaurantsData && !!param.id && !restaurant;
+
   const [selectedSegment, setSelectedSegment] = useState("Entrées");
   const [isModalVisible, setIsModalVisible] = useState(false);
   const [currentProductInModal, setCurrentProductInModal] =
@@ -49,32 +52,40 @@ const Restaurant: React.FC = () => {
   return (
     <div className="restaurant-main-container">
       <NavBar />
-      <h1>{restaurant?.name}</h1>
-      <p>{restaurant?.description}</p>
-      <div>
-        <Segmented<string>
-          options={["Entrées", "Plats", "Desserts", "Boissons"]}
-          defaultValue={"Entrées"}
-          onChange={handleSegmentChange}
-          block
-        />
-      </div>
-      <div>
-        {filteredProducts?.map((product, index) => (
-          <div key={index}>
-            <ProductCard
-              product={product}
-              onShowModal={() => openProductModal(product)}
+      {idNotFound ? (
+        <>
+          <h1>Restaurant not found</h1>
+        </>
+      ) : (
+        <>
+          <h1>{restaurant?.name}</h1>
+          <p>{restaurant?.description}</p>
+          <div>
+            <Segmented<string>
+              options={["Entrées", "Plats", "Desserts", "Boissons"]}
+              defaultValue={"Entrées"}
+              onChange={handleSegmentChange}
+              block
             />
           </div>
-        ))}
-        {isModalVisible && currentProductInModal !== null && (
-          <ProductModal
-            product={currentProductInModal}
-            closeModal={closeProductModal}
-          />
-        )}
-      </div>
+          <div>
+            {filteredProducts?.map((product, index) => (
+              <div key={index}>
+                <ProductCard
+                  product={product}
+                  onShowModal={() => openProductModal(product)}
+                />
+              </div>
+            ))}
+            {isModalVisible && currentProductInModal !== null && (
+              <ProductModal
+                product={currentProductInModal}
+                closeModal={closeProductModal}
+              />
+            )}
+          </div>
+        </>
+      )}
     </div>
   );
 };
