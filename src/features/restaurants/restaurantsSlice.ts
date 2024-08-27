@@ -1,6 +1,7 @@
 import { createSlice, PayloadAction, SerializedError } from "@reduxjs/toolkit";
 import { Restaurant } from "../../types/types";
 import { fetchRestaurants } from "./fetchRestaurants";
+import { logoutUser } from "../authSlice";
 
 type RestaurantsState = {
   restaurants: Restaurant[];
@@ -31,14 +32,16 @@ const restaurantsSlice = createSlice({
           state.loading = false;
         }
       )
-
       .addCase(
         fetchRestaurants.rejected,
         (state, action: PayloadAction<SerializedError | undefined>) => {
           state.loading = false;
           state.error = action.payload || null;
         }
-      );
+      )
+      .addCase(logoutUser.type, () => {
+        return { ...initialState };
+      });
   },
 });
 

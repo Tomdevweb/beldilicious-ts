@@ -1,5 +1,6 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { Product } from "../types/types";
+import { logoutUser } from "./authSlice";
 
 type CartItem = Product & { quantity: number };
 
@@ -27,30 +28,6 @@ const cartSlice = createSlice({
         state.items.push(action.payload);
       }
     },
-
-    // addToCart: (state, action: PayloadAction<CartItem>) => {
-    //   const exisitingItem = state.items.find(
-    //     (item) => item.id === action.payload.id
-    //   );
-
-    //   if (exisitingItem) {
-    //     state.items = state.items.map((item) => {
-    //       if (item.id === action.payload.id) {
-    //         item.quantity += action.payload.quantity;
-    //       }
-    //       return item;
-    //     });
-    //   } else {
-    //     state.items.push(action.payload);
-    //   }
-    // },
-
-    // addToCart: (state, action: PayloadAction<CartItem>) => {
-    //   if (state.items.find((item) => item.id === action.payload.id)) {
-    //   } else {
-    //     state.items.push(action.payload);
-    //   }
-    // },
 
     removeFromCart: (state, action: PayloadAction<string>) => {
       const itemId = action.payload;
@@ -83,6 +60,12 @@ const cartSlice = createSlice({
       });
     },
   },
+
+  // CartSlice listening actions from other slice
+  extraReducers: (builder) =>
+    builder.addCase(logoutUser.type, (state) => {
+      state.items = initialState.items;
+    }),
 });
 
 export const {
