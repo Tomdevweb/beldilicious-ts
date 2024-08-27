@@ -16,6 +16,7 @@ export const fetchRestaurants = createAsyncThunk<
 >("restaurants/fetchRestaurants", async () => {
   try {
     await sleep(2000);
+    // const res = { data: { toto: true } };
     const res = { data: restaurantsData };
     return res.data;
   } catch (error) {

@@ -31,6 +31,7 @@ const restaurantsSlice = createSlice({
           state.loading = false;
         }
       )
+
       .addCase(
         fetchRestaurants.rejected,
         (state, action: PayloadAction<SerializedError | undefined>) => {
