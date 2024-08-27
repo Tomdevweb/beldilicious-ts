@@ -1,18 +1,23 @@
 import { signOut } from "firebase/auth";
 import React, { useEffect, useState } from "react";
 import { useAppDispatch } from "../app/hooks";
-import restaurantsData from "../assets/data/restaurants.json";
 import locationIcon from "../assets/location-icon.svg";
 import RestaurantCard from "../components/RestaurantCard";
 import { logoutUser } from "../features/authSlice";
 import { auth } from "../firebaseConfig";
 import "../styles/home.scss";
 import NavBar from "../components/NavBar";
+import { Restaurant } from "../types/types";
+
+// TODO
+const restoFromState: Restaurant[] = [];
 
 const Home: React.FC = () => {
   const dispatch = useAppDispatch();
   const [searchRestaurant, setSearchRestaurant] = useState("");
-  const [filteredRestaurant, setFilteredRestaurant] = useState(restaurantsData);
+  const [filteredRestaurant, setFilteredRestaurant] = useState<Restaurant[]>(
+    []
+  );
 
   const handleLogOut = () => {
     dispatch(logoutUser());
@@ -23,9 +28,9 @@ const Home: React.FC = () => {
 
   const handleSearch = () => {
     if (searchRestaurant === "") {
-      setFilteredRestaurant(restaurantsData);
+      setFilteredRestaurant(restoFromState);
     } else {
-      const filteredRestaurantByCity = restaurantsData.filter((restaurant) =>
+      const filteredRestaurantByCity = restoFromState.filter((restaurant) =>
         restaurant.city
           .toLocaleLowerCase()
           .includes(searchRestaurant.toLocaleLowerCase())
@@ -37,7 +42,10 @@ const Home: React.FC = () => {
   // Effect triggered when search change
   useEffect(() => {
     handleSearch();
+    // eslint-disable-next-line
   }, [searchRestaurant]);
+
+  // TODO On mount: fetch restaurants
 
   return (
     <div>

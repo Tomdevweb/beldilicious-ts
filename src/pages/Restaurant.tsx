@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useParams } from "react-router-dom";
-import restaurantsData from "../assets/data/restaurants.json";
+import restaurantsData from "../data/restaurants.json";
 import { Segmented } from "antd";
 import "../styles/restaurant.scss";
 import { Product } from "../types/types";
