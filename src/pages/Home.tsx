@@ -1,6 +1,6 @@
 import { signOut } from "firebase/auth";
 import React, { useEffect, useState } from "react";
-import { useAppDispatch } from "../app/hooks";
+import { useAppDispatch, useAppSelector } from "../app/hooks";
 import locationIcon from "../assets/location-icon.svg";
 import RestaurantCard from "../components/RestaurantCard";
 import { logoutUser } from "../features/authSlice";
@@ -8,12 +8,17 @@ import { auth } from "../firebaseConfig";
 import "../styles/home.scss";
 import NavBar from "../components/NavBar";
 import { Restaurant } from "../types/types";
+import { fetchRestaurants } from "../features/restaurants/fetchRestaurants";
 
 // TODO
-const restoFromState: Restaurant[] = [];
 
 const Home: React.FC = () => {
   const dispatch = useAppDispatch();
+
+  const { restaurants, loading, error } = useAppSelector(
+    (state) => state.restaurants
+  );
+
   const [searchRestaurant, setSearchRestaurant] = useState("");
   const [filteredRestaurant, setFilteredRestaurant] = useState<Restaurant[]>(
     []
@@ -24,18 +29,15 @@ const Home: React.FC = () => {
     signOut(auth);
   };
 
-  // Faire un fetch pour evolution du code si on branche de la vraie data. FetchRestaurant / Product (faire un loading 1 sec)
-
   const handleSearch = () => {
     if (searchRestaurant === "") {
-      setFilteredRestaurant(restoFromState);
+      setFilteredRestaurant(restaurants);
     } else {
-      const filteredRestaurantByCity = restoFromState.filter((restaurant) =>
+      const filteredRestaurantByCity = restaurants.filter((restaurant) =>
         restaurant.city
           .toLocaleLowerCase()
           .includes(searchRestaurant.toLocaleLowerCase())
       );
-      console.log(filteredRestaurantByCity);
       setFilteredRestaurant(filteredRestaurantByCity);
     }
   };
@@ -43,9 +45,13 @@ const Home: React.FC = () => {
   useEffect(() => {
     handleSearch();
     // eslint-disable-next-line
-  }, [searchRestaurant]);
+  }, [searchRestaurant, restaurants]);
 
-  // TODO On mount: fetch restaurants
+  // On mount: fetch restaurants
+  useEffect(() => {
+    dispatch(fetchRestaurants());
+    // eslint-disable-next-line
+  }, []);
 
   return (
     <div>
@@ -75,6 +81,8 @@ const Home: React.FC = () => {
       </div>
       <button onClick={handleLogOut}>LogOut</button>
       <div className="cards-container">
+        {loading && <span>Loading...</span>}
+        {error?.message && <span>{error.message}</span>}
         {filteredRestaurant.map((restaurant) => (
           <RestaurantCard key={restaurant.id} restaurant={restaurant} />
         ))}

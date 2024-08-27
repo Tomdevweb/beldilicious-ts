@@ -2,13 +2,13 @@ import { createSlice, PayloadAction, SerializedError } from "@reduxjs/toolkit";
 import { Restaurant } from "../../types/types";
 import { fetchRestaurants } from "./fetchRestaurants";
 
-type RestaurantState = {
+type RestaurantsState = {
   restaurants: Restaurant[];
   loading: boolean;
   error: SerializedError | null;
 };
 
-const initialState: RestaurantState = {
+const initialState: RestaurantsState = {
   restaurants: [],
   loading: false,
   error: null,
