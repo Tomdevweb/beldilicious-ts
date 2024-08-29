@@ -12,9 +12,7 @@ import { Product } from "../types/types";
 const Restaurant: React.FC = () => {
   const param = useParams();
 
-  const { restaurants, loading, error } = useAppSelector(
-    (state) => state.restaurants
-  );
+  const { restaurants } = useAppSelector((state) => state.restaurants);
   const restaurant = restaurants.find(
     (restaurant) => restaurant.id === param.id
   );
