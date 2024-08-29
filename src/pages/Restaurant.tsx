@@ -3,18 +3,24 @@ import { useParams } from "react-router-dom";
 import restaurantsData from "../data/restaurants.json";
 import { Segmented } from "antd";
 import "../styles/restaurant.scss";
-import { Product } from "../types/types";
 import ProductCard from "../components/ProductCard";
 import ProductModal from "../components/ProductModal";
 import NavBar from "../components/NavBar";
+import { useAppSelector } from "../app/hooks";
+import { Product } from "../types/types";
 
 const Restaurant: React.FC = () => {
   const param = useParams();
-  const restaurant = restaurantsData.find(
+
+  const { restaurants, loading, error } = useAppSelector(
+    (state) => state.restaurants
+  );
+  const restaurant = restaurants.find(
     (restaurant) => restaurant.id === param.id
   );
 
-  const idNotFound = !!restaurantsData && !!param.id && !restaurant;
+  // If url param isn't good
+  const idNotFound = !!restaurants && !!param.id && !restaurant;
 
   const [selectedSegment, setSelectedSegment] = useState("Entrées");
   const [isModalVisible, setIsModalVisible] = useState(false);
@@ -25,7 +31,12 @@ const Restaurant: React.FC = () => {
     setSelectedSegment(value);
   };
 
-  const { starters, maincourses, desserts, drinks } = restaurant?.menu ?? {};
+  const starters = (restaurant?.menu?.starters ?? []) as Product[];
+  const maincourses = (restaurant?.menu?.maincourses ?? []) as Product[];
+  const desserts = (restaurant?.menu?.desserts ?? []) as Product[];
+  const drinks = (restaurant?.menu?.drinks ?? []) as Product[];
+
+  console.log(starters);
   // segmentMap est un objet où chaque clé est un nom de segment (comme "Entrées")
   // et chaque valeur est un tableau d'éléments de menu (Product[]).
   // Déclare segmentMap avec des valeurs potentiellement undefined ou un tableau de Product
