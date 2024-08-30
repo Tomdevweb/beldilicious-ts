@@ -1,9 +1,9 @@
 import { Card } from "antd";
 import Meta from "antd/es/card/Meta";
-import React, { useEffect, useState } from "react";
+import React from "react";
 import { Link } from "react-router-dom";
 import { Restaurant } from "../types/types";
-import { getImageUrl } from "../utils/restaurantsImagesHelper";
+import { useRestaurantImage } from "../hooks/useRestaurantImage";
 
 type Props = {
   restaurant: Restaurant;
@@ -11,16 +11,7 @@ type Props = {
 
 const RestaurantCard: React.FC<Props> = ({ restaurant }) => {
   // Change imageUrl logic if connected to a real backend
-  const [imageUrl, setImageUrl] = useState<string>("");
-
-  useEffect(() => {
-    const fetchImage = async () => {
-      const url = await getImageUrl(restaurant.id);
-      setImageUrl(url);
-    };
-
-    fetchImage();
-  }, [restaurant.id]);
+  const imageUrl = useRestaurantImage(restaurant.id);
   return (
     <Link className="card" to={`/restaurant/${restaurant.id}`}>
       <Card

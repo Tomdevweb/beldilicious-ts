@@ -66,6 +66,7 @@ const Restaurant: React.FC = () => {
       ) : (
         <>
           <Link to="/home"> -- Retour</Link>
+          <img src={restaurant?.image} alt="" />
           <h1>{restaurant?.name}</h1>
           <p>{restaurant?.description}</p>
           <div>
