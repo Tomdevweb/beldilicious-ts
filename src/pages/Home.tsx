@@ -1,10 +1,7 @@
-import { signOut } from "firebase/auth";
 import React, { useEffect, useState } from "react";
 import { useAppDispatch, useAppSelector } from "../app/hooks";
 import locationIcon from "../assets/location-icon.svg";
 import RestaurantCard from "../components/RestaurantCard";
-import { logoutUser } from "../features/authSlice";
-import { auth } from "../firebaseConfig";
 import "../styles/home.scss";
 import NavBar from "../components/NavBar";
 import { Restaurant } from "../types/types";
@@ -21,11 +18,6 @@ const Home: React.FC = () => {
   const [filteredRestaurant, setFilteredRestaurant] = useState<Restaurant[]>(
     []
   );
-
-  const handleLogOut = () => {
-    dispatch(logoutUser());
-    signOut(auth);
-  };
 
   const handleSearch = () => {
     if (searchRestaurant === "") {
@@ -57,9 +49,13 @@ const Home: React.FC = () => {
         <NavBar />
         <div className="header">
           <h1 className="header-title">
-            Your favorites local food delivered to your door
+            Your favorites healthy food <br />
+            delivered to your door
           </h1>
           <div className="search-container">
+            <span className="search-box-description">
+              Enter your city to discover restaurants close to you
+            </span>
             <div className="search-box">
               <img
                 src={locationIcon}
@@ -69,7 +65,7 @@ const Home: React.FC = () => {
               <input
                 type="text"
                 id="search-input"
-                placeholder="Find a restaurant in your city..."
+                placeholder="Enter your city..."
                 onChange={(e) => setSearchRestaurant(e.target.value)}
               />
               <button onClick={handleSearch}>Search</button>
@@ -77,7 +73,7 @@ const Home: React.FC = () => {
           </div>
         </div>
       </div>
-      <button onClick={handleLogOut}>LogOut</button>
+
       <div className="cards-container">
         {loading && <span>Loading...</span>}
         {error?.message && <span>{error.message}</span>}

@@ -1,644 +1,913 @@
 [
   {
     "id": "101",
-    "name": "Havre Vert",
-    "address": "123 Rue Verte",
+    "name": "Green Haven",
+    "address": "123 Green Street",
     "city": "Casablanca",
-    "description": "Un restaurant végétalien chic offrant une variété de plats santé.",
+    "description": "A chic vegan restaurant offering a variety of healthy dishes.",
+    "image": "/assets/restaurants/101.png",
     "menu": {
       "starters": [
         {
           "id": "101-1",
-          "name": "Salade d'Avocat",
-          "price": 7.5
+          "name": "Avocado Salad",
+          "price": 7.5,
+          "description": "A refreshing salad with creamy avocado, cherry tomatoes, and mixed greens."
         },
         {
           "id": "101-2",
-          "name": "Poivrons Farcis au Quinoa",
-          "price": 8.0
+          "name": "Quinoa Stuffed Peppers",
+          "price": 8.0,
+          "description": "Colorful bell peppers stuffed with protein-rich quinoa and fresh herbs."
         },
         {
           "id": "101-3",
-          "name": "Trempette aux Épinards et Artichauts",
-          "price": 6.75
+          "name": "Spinach and Artichoke Dip",
+          "price": 6.75,
+          "description": "A creamy dip made with spinach, artichokes, and a hint of garlic."
         }
       ],
       "maincourses": [
         {
           "id": "101-4",
-          "name": "Tofu Grillé avec Légumes",
-          "price": 12.5
+          "name": "Grilled Tofu with Vegetables",
+          "price": 12.5,
+          "description": "Marinated tofu grilled to perfection, served with a side of seasonal vegetables."
         },
         {
           "id": "101-5",
-          "name": "Bol Bouddha Végétalien",
-          "price": 11.0
+          "name": "Vegan Buddha Bowl",
+          "price": 11.0,
+          "description": "A wholesome bowl filled with quinoa, roasted vegetables, and a tahini dressing."
         },
         {
           "id": "101-6",
-          "name": "Ragoût de Lentilles et Patates Douces",
-          "price": 13.0
+          "name": "Lentil and Sweet Potato Stew",
+          "price": 13.0,
+          "description": "A hearty stew made with tender lentils, sweet potatoes, and warm spices."
         },
         {
           "id": "101-7",
-          "name": "Sauté de Légumes avec Riz Complet",
-          "price": 12.0
+          "name": "Vegetable Stir-Fry with Brown Rice",
+          "price": 12.0,
+          "description": "A vibrant stir-fry of mixed vegetables served over nutty brown rice."
         }
       ],
       "desserts": [
         {
           "id": "101-8",
-          "name": "Pudding de Chia",
-          "price": 5.0
+          "name": "Chia Pudding",
+          "price": 5.0,
+          "description": "A creamy chia pudding topped with fresh berries and a drizzle of honey."
         },
         {
           "id": "101-9",
-          "name": "Bol d'Açaï aux Baies",
-          "price": 6.5
+          "name": "Açaí Bowl with Berries",
+          "price": 6.5,
+          "description": "A nutritious açaí bowl loaded with fresh berries and granola."
         },
         {
           "id": "101-10",
-          "name": "Mousse au Chocolat Végétalienne",
-          "price": 7.0
+          "name": "Vegan Chocolate Mousse",
+          "price": 7.0,
+          "description": "A rich and velvety chocolate mousse made with dark chocolate and coconut milk."
         }
       ],
       "drinks": [
         {
           "id": "101-11",
-          "name": "Smoothie Détox Vert",
-          "price": 4.5
+          "name": "Green Detox Smoothie",
+          "price": 4.5,
+          "description": "A rejuvenating smoothie packed with spinach, apple, and ginger."
         },
         {
           "id": "101-12",
-          "name": "Thé à la Menthe Fraîche",
-          "price": 3.0
+          "name": "Fresh Mint Tea",
+          "price": 3.0,
+          "description": "A refreshing tea brewed with fresh mint leaves."
         },
         {
           "id": "101-13",
-          "name": "Eau Citronnée au Concombre",
-          "price": 2.5
+          "name": "Cucumber Lemon Water",
+          "price": 2.5,
+          "description": "A hydrating blend of cucumber slices and lemon in chilled water."
         },
         {
           "id": "101-14",
-          "name": "Gingembre Bio Pétillant",
-          "price": 3.5
+          "name": "Organic Ginger Ale",
+          "price": 3.5,
+          "description": "A zesty ginger ale made with organic ginger root."
         },
         {
           "id": "101-15",
           "name": "Kombucha",
-          "price": 5.0
+          "price": 5.0,
+          "description": "A fermented tea drink, slightly effervescent and full of probiotics."
         }
       ]
     }
   },
   {
     "id": "102",
-    "name": "Délice Santé",
-    "address": "456 Boulevard du Bien-être",
+    "name": "Healthy Delight",
+    "address": "456 Wellness Boulevard",
     "city": "Rabat",
-    "description": "Un endroit parfait pour savourer des repas équilibrés et délicieux.",
+    "description": "A perfect spot to enjoy balanced and delicious meals.",
+    "image": "/assets/restaurants/102.png",
+
     "menu": {
       "starters": [
         {
           "id": "102-1",
-          "name": "Salade de Kale et Noix",
-          "price": 7.0
+          "name": "Kale and Walnut Salad",
+          "price": 7.0,
+          "description": "A nutrient-rich salad with kale, toasted walnuts, and a lemon vinaigrette."
         },
         {
           "id": "102-2",
-          "name": "Nouilles de Courgette au Pesto",
-          "price": 8.5
+          "name": "Zucchini Noodles with Pesto",
+          "price": 8.5,
+          "description": "Spiralized zucchini tossed in a fresh basil pesto sauce."
         },
         {
           "id": "102-3",
-          "name": "Soupe de Carottes et Gingembre",
-          "price": 6.5
+          "name": "Carrot and Ginger Soup",
+          "price": 6.5,
+          "description": "A warming soup with the sweetness of carrots and the zing of ginger."
         }
       ],
       "maincourses": [
         {
           "id": "102-4",
-          "name": "Saumon Grillé avec Quinoa",
-          "price": 14.0
+          "name": "Grilled Salmon with Quinoa",
+          "price": 14.0,
+          "description": "Perfectly grilled salmon served on a bed of fluffy quinoa."
         },
         {
           "id": "102-5",
-          "name": "Sauté de Lentilles et Légumes",
-          "price": 12.0
+          "name": "Lentil and Vegetable Stir-Fry",
+          "price": 12.0,
+          "description": "A protein-packed stir-fry of lentils and colorful vegetables."
         },
         {
           "id": "102-6",
-          "name": "Risotto de Courge Butternut Rôtie",
-          "price": 13.5
+          "name": "Roasted Butternut Squash Risotto",
+          "price": 13.5,
+          "description": "A creamy risotto with roasted butternut squash and sage."
         },
         {
           "id": "102-7",
-          "name": "Sauté de Tofu et Brocoli",
-          "price": 11.5
+          "name": "Tofu and Broccoli Stir-Fry",
+          "price": 11.5,
+          "description": "A satisfying stir-fry with tofu, broccoli, and a savory sauce."
         }
       ],
       "desserts": [
         {
           "id": "102-8",
-          "name": "Brownie Végétalien Cru",
-          "price": 6.0
+          "name": "Raw Vegan Brownie",
+          "price": 6.0,
+          "description": "A decadent raw brownie made with dates, nuts, and cacao."
         },
         {
           "id": "102-9",
-          "name": "Yaourt de Coco avec Baies",
-          "price": 5.5
+          "name": "Coconut Yogurt with Berries",
+          "price": 5.5,
+          "description": "A creamy coconut yogurt topped with fresh berries and granola."
         },
         {
           "id": "102-10",
-          "name": "Boules Énergie aux Dattes et Amandes",
-          "price": 4.75
+          "name": "Date and Almond Energy Balls",
+          "price": 4.75,
+          "description": "Nutritious energy balls made with dates, almonds, and a hint of vanilla."
         }
       ],
       "drinks": [
         {
           "id": "102-11",
           "name": "Kombucha",
-          "price": 4.0
+          "price": 4.0,
+          "description": "A fermented tea drink, slightly tangy and fizzy."
         },
         {
           "id": "102-12",
-          "name": "Jus Pressé à Froid",
-          "price": 5.0
+          "name": "Cold-Pressed Juice",
+          "price": 5.0,
+          "description": "A refreshing juice made from freshly pressed fruits and vegetables."
         },
         {
           "id": "102-13",
-          "name": "Thé Glacé aux Herbes",
-          "price": 3.5
+          "name": "Herbal Iced Tea",
+          "price": 3.5,
+          "description": "A cooling iced tea brewed with a blend of herbs."
         },
         {
           "id": "102-14",
-          "name": "Latte au Matcha",
-          "price": 4.75
+          "name": "Matcha Latte",
+          "price": 4.75,
+          "description": "A creamy latte made with high-quality matcha green tea."
         },
         {
           "id": "102-15",
-          "name": "Eau Pétillante au Citron",
-          "price": 2.5
+          "name": "Lemon Sparkling Water",
+          "price": 2.5,
+          "description": "A bubbly and refreshing lemon-flavored sparkling water."
         }
       ]
     }
   },
   {
     "id": "103",
-    "name": "Cuisine Vitalité",
-    "address": "789 Rue de l'Énergie",
+    "name": "Vitality Kitchen",
+    "address": "789 Energy Street",
     "city": "Marrakech",
-    "description": "Des repas énergétiques pour garder la vitalité toute la journée.",
+    "description": "Energizing meals to keep you vitalized all day long.",
+    "image": "/assets/restaurants/103.png",
     "menu": {
       "starters": [
         {
           "id": "103-1",
-          "name": "Carpaccio de Betterave",
-          "price": 7.75
+          "name": "Beet Carpaccio",
+          "price": 7.75,
+          "description": "Thinly sliced beets drizzled with balsamic glaze and garnished with arugula."
         },
         {
           "id": "103-2",
-          "name": "Sushi Végétalien",
-          "price": 9.0
+          "name": "Vegan Sushi",
+          "price": 9.0,
+          "description": "Delicate sushi rolls filled with fresh vegetables and avocado."
         },
         {
           "id": "103-3",
-          "name": "Soupe de Brocoli",
-          "price": 6.25
+          "name": "Broccoli Soup",
+          "price": 6.25,
+          "description": "A creamy soup made with fresh broccoli and a touch of garlic."
         }
       ],
       "maincourses": [
         {
           "id": "103-4",
-          "name": "Curry Épicé aux Pois Chiches",
-          "price": 13.0
+          "name": "Spicy Chickpea Curry",
+          "price": 13.0,
+          "description": "A flavorful curry with chickpeas, tomatoes, and a blend of spices."
         },
         {
           "id": "103-5",
-          "name": "Steak de Chou-fleur",
-          "price": 12.5
+          "name": "Cauliflower Steak",
+          "price": 12.5,
+          "description": "Grilled cauliflower seasoned with herbs and served with a side salad."
         },
         {
           "id": "103-6",
-          "name": "Burger de Quinoa et Haricots Noirs",
-          "price": 11.75
+          "name": "Quinoa and Black Bean Burger",
+          "price": 11.75,
+          "description": "A hearty burger made with quinoa, black beans, and a spicy kick."
         },
         {
           "id": "103-7",
-          "name": "Poivrons Farcis",
-          "price": 12.0
+          "name": "Stuffed Peppers",
+          "price": 12.0,
+          "description": "Bell peppers stuffed with a savory mixture of rice, beans, and vegetables."
         }
       ],
       "desserts": [
         {
           "id": "103-8",
-          "name": "Sorbet à la Mangue",
-          "price": 5.5
+          "name": "Mango Sorbet",
+          "price": 5.5,
+          "description": "A refreshing sorbet made with ripe mangoes and a hint of lime."
         },
         {
           "id": "103-9",
-          "name": "Biscuits à la Farine d'Amande",
-          "price": 4.5
+          "name": "Almond Flour Cookies",
+          "price": 4.5,
+          "description": "Deliciously chewy cookies made with almond flour and a touch of vanilla."
         },
         {
           "id": "103-10",
-          "name": "Barres d'Avoine aux Myrtilles",
-          "price": 6.0
+          "name": "Blueberry Oat Bars",
+          "price": 6.0,
+          "description": "Oat bars layered with sweet blueberries and a crumbly topping."
         }
       ],
       "drinks": [
         {
           "id": "103-11",
-          "name": "Latte au Curcuma et Gingembre",
-          "price": 4.75
+          "name": "Turmeric and Ginger Latte",
+          "price": 4.75,
+          "description": "A warm and spicy latte made with turmeric, ginger, and almond milk."
         },
         {
           "id": "103-12",
-          "name": "Thé Matcha Glacé",
-          "price": 4.25
+          "name": "Iced Matcha Tea",
+          "price": 4.25,
+          "description": "A cool and refreshing iced tea made with premium matcha powder."
         },
         {
           "id": "103-13",
-          "name": "Smoothie Ananas et Menthe",
-          "price": 5.0
+          "name": "Pineapple and Mint Smoothie",
+          "price": 5.0,
+          "description": "A tropical smoothie with pineapple, fresh mint, and coconut water."
         },
         {
           "id": "103-14",
-          "name": "Jus Vert Détox",
-          "price": 5.5
+          "name": "Green Detox Juice",
+          "price": 5.5,
+          "description": "A cleansing juice packed with green vegetables and a splash of lemon."
         },
         {
           "id": "103-15",
-          "name": "Infusion de Plantes Glacée",
-          "price": 3.25
+          "name": "Iced Herbal Infusion",
+          "price": 3.25,
+          "description": "A chilled infusion of herbs, perfect for a hot day."
         }
       ]
     }
   },
   {
     "id": "104",
-    "name": "La Table de la Nature",
-    "address": "101 Rue Bio",
+    "name": "Nature's Table",
+    "address": "101 Organic Street",
     "city": "Casablanca",
-    "description": "Un espace dédié aux plats bio et locaux pour une alimentation saine.",
+    "description": "A space dedicated to organic and local dishes for healthy eating.",
+    "image": "/assets/restaurants/104.png",
     "menu": {
       "starters": [
         {
           "id": "104-1",
-          "name": "Bruschetta à la Tomate et Basilic",
-          "price": 6.5
+          "name": "Tomato and Basil Bruschetta",
+          "price": 6.5,
+          "description": "Crispy bread topped with fresh tomatoes, basil, and a drizzle of olive oil."
         },
         {
           "id": "104-2",
-          "name": "Soupe de Citrouille Rôtie",
-          "price": 7.25
+          "name": "Roasted Pumpkin Soup",
+          "price": 7.25,
+          "description": "A creamy soup made with roasted pumpkin and a touch of cinnamon."
         },
         {
           "id": "104-3",
-          "name": "Gaspacho de Concombre et Avocat",
-          "price": 6.75
+          "name": "Cucumber and Avocado Gazpacho",
+          "price": 6.75,
+          "description": "A chilled soup with the freshness of cucumber and creaminess of avocado."
         }
       ],
       "maincourses": [
         {
           "id": "104-4",
-          "name": "Champignons Portobello Grillés",
-          "price": 11.75
+          "name": "Grilled Portobello Mushrooms",
+          "price": 11.75,
+          "description": "Meaty Portobello mushrooms grilled to perfection, served with a side salad."
         },
         {
           "id": "104-5",
-          "name": "Patates Douces Farcies",
-          "price": 12.0
+          "name": "Stuffed Sweet Potatoes",
+          "price": 12.0,
+          "description": "Baked sweet potatoes stuffed with a savory mixture of beans and spices."
         },
         {
           "id": "104-6",
-          "name": "Pad Thaï Végétalien",
-          "price": 13.25
+          "name": "Vegan Pad Thai",
+          "price": 13.25,
+          "description": "A plant-based version of the classic Pad Thai with tofu and vegetables."
         },
         {
           "id": "104-7",
-          "name": "Tacos de Chou-fleur Rôti",
-          "price": 11.5
+          "name": "Roasted Cauliflower Tacos",
+          "price": 11.5,
+          "description": "Soft tacos filled with roasted cauliflower and a tangy slaw."
         }
       ],
       "desserts": [
         {
           "id": "104-8",
-          "name": "Gâteau aux Carottes avec Glaçage de Noix de Cajou",
-          "price": 5.75
+          "name": "Carrot Cake with Cashew Frosting",
+          "price": 5.75,
+          "description": "A moist carrot cake topped with a creamy cashew frosting."
         },
         {
           "id": "104-9",
-          "name": "Salade de Fruits à la Menthe",
-          "price": 4.75
+          "name": "Fruit Salad with Mint",
+          "price": 4.75,
+          "description": "A refreshing fruit salad tossed with fresh mint leaves."
         },
         {
           "id": "104-10",
-          "name": "Crumble aux Pommes et Noix",
-          "price": 6.25
+          "name": "Apple and Nut Crumble",
+          "price": 6.25,
+          "description": "A warm crumble made with apples and a crunchy nut topping."
         }
       ],
       "drinks": [
         {
           "id": "104-11",
-          "name": "Infusion de Plantes",
-          "price": 3.5
+          "name": "Herbal Infusion",
+          "price": 3.5,
+          "description": "A calming blend of herbs brewed into a soothing tea."
         },
         {
           "id": "104-12",
-          "name": "Jus Vert Bio",
-          "price": 5.25
+          "name": "Organic Green Juice",
+          "price": 5.25,
+          "description": "A nutrient-packed juice made with organic greens and a hint of apple."
         },
         {
           "id": "104-13",
-          "name": "Limonade à la Lavande",
-          "price": 4.0
+          "name": "Lavender Lemonade",
+          "price": 4.0,
+          "description": "A floral and refreshing lemonade infused with lavender."
         },
         {
           "id": "104-14",
-          "name": "Latte au Chai",
-          "price": 4.5
+          "name": "Chai Latte",
+          "price": 4.5,
+          "description": "A spiced chai latte made with black tea and warm spices."
         },
         {
           "id": "104-15",
-          "name": "Refroidisseur au Concombre et Menthe",
-          "price": 3.75
+          "name": "Cucumber Mint Cooler",
+          "price": 3.75,
+          "description": "A refreshing cooler made with cucumber, mint, and a splash of lime."
         }
       ]
     }
   },
   {
     "id": "105",
-    "name": "Escale Santé",
-    "address": "222 Boulevard de la Santé",
+    "name": "Health Haven",
+    "address": "222 Health Boulevard",
     "city": "Agadir",
-    "description": "Un refuge pour les amateurs de cuisine saine et équilibrée.",
+    "description": "A haven for lovers of healthy and balanced cuisine.",
+    "image": "/assets/restaurants/105.png",
     "menu": {
       "starters": [
         {
           "id": "105-1",
-          "name": "Salade de Quinoa et Grenade",
-          "price": 7.25
+          "name": "Quinoa and Pomegranate Salad",
+          "price": 7.25,
+          "description": "A vibrant salad with quinoa, juicy pomegranate seeds, and fresh herbs."
         },
         {
           "id": "105-2",
-          "name": "Houmous de Betterave",
-          "price": 6.75
+          "name": "Beet Hummus",
+          "price": 6.75,
+          "description": "A colorful hummus made with beets, tahini, and a hint of garlic."
         },
         {
           "id": "105-3",
-          "name": "Soupe de Patate Douce",
-          "price": 6.5
+          "name": "Sweet Potato Soup",
+          "price": 6.5,
+          "description": "A creamy and comforting soup made with sweet potatoes and spices."
         }
       ],
       "maincourses": [
         {
           "id": "105-4",
-          "name": "Gratin de Chou-Fleur",
-          "price": 11.5
+          "name": "Cauliflower Gratin",
+          "price": 11.5,
+          "description": "A cheesy gratin with tender cauliflower and a crispy topping."
         },
         {
           "id": "105-5",
-          "name": "Lasagnes de Courgettes",
-          "price": 12.75
+          "name": "Zucchini Lasagna",
+          "price": 12.75,
+          "description": "A light and healthy lasagna made with zucchini slices instead of pasta."
         },
         {
           "id": "105-6",
-          "name": "Bol Poké au Saumon",
-          "price": 14.0
+          "name": "Salmon Poke Bowl",
+          "price": 14.0,
+          "description": "A fresh poke bowl with salmon, avocado, and a tangy soy dressing."
         },
         {
           "id": "105-7",
-          "name": "Couscous Végétarien",
-          "price": 13.0
+          "name": "Vegetarian Couscous",
+          "price": 13.0,
+          "description": "A flavorful couscous with a variety of roasted vegetables and spices."
         }
       ],
       "desserts": [
         {
           "id": "105-8",
-          "name": "Tartelette au Citron",
-          "price": 5.5
+          "name": "Lemon Tart",
+          "price": 5.5,
+          "description": "A zesty lemon tart with a buttery crust and a tangy filling."
         },
         {
           "id": "105-9",
-          "name": "Crème Brûlée à la Vanille",
-          "price": 6.0
+          "name": "Vanilla Crème Brûlée",
+          "price": 6.0,
+          "description": "A classic crème brûlée with a creamy vanilla custard and caramelized sugar."
         },
         {
           "id": "105-10",
-          "name": "Salade de Fruits Exotiques",
-          "price": 5.75
+          "name": "Exotic Fruit Salad",
+          "price": 5.75,
+          "description": "A tropical fruit salad with mango, pineapple, and papaya."
         }
       ],
       "drinks": [
         {
           "id": "105-11",
-          "name": "Thé Glacé à la Menthe",
-          "price": 3.75
+          "name": "Mint Iced Tea",
+          "price": 3.75,
+          "description": "A refreshing iced tea brewed with fresh mint leaves."
         },
         {
           "id": "105-12",
-          "name": "Smoothie Tropical",
-          "price": 4.5
+          "name": "Tropical Smoothie",
+          "price": 4.5,
+          "description": "A creamy smoothie made with tropical fruits and coconut milk."
         },
         {
           "id": "105-13",
-          "name": "Jus d'Orange Fraîchement Pressé",
-          "price": 3.5
+          "name": "Freshly Squeezed Orange Juice",
+          "price": 3.5,
+          "description": "A glass of freshly squeezed orange juice, full of vitamin C."
         },
         {
           "id": "105-14",
-          "name": "Limonade Maison",
-          "price": 3.25
+          "name": "Homemade Lemonade",
+          "price": 3.25,
+          "description": "A classic lemonade made with freshly squeezed lemons and a touch of sugar."
         },
         {
           "id": "105-15",
-          "name": "Kombucha au Gingembre",
-          "price": 4.25
+          "name": "Ginger Kombucha",
+          "price": 4.25,
+          "description": "A tangy and spicy kombucha infused with fresh ginger."
         }
       ]
     }
   },
   {
     "id": "106",
-    "name": "Délice Vital",
-    "address": "333 Rue de la Vie",
+    "name": "Vital Delight",
+    "address": "333 Life Street",
     "city": "Tanger",
-    "description": "Savourez des plats délicieux qui nourrissent le corps et l'esprit.",
+    "description": "Enjoy delicious dishes that nourish the body and soul.",
+    "image": "/assets/restaurants/106.png",
     "menu": {
       "starters": [
         {
           "id": "106-1",
-          "name": "Taboulé de Quinoa",
-          "price": 7.0
+          "name": "Quinoa Tabbouleh",
+          "price": 7.0,
+          "description": "A light and refreshing tabbouleh made with quinoa, parsley, and mint."
         },
         {
           "id": "106-2",
-          "name": "Tartare d'Avocat",
-          "price": 7.75
+          "name": "Avocado Tartare",
+          "price": 7.75,
+          "description": "A creamy avocado tartare with lime juice and a touch of spice."
         },
         {
           "id": "106-3",
-          "name": "Velouté de Champignons",
-          "price": 6.75
+          "name": "Cream of Mushroom Soup",
+          "price": 6.75,
+          "description": "A rich and creamy soup made with wild mushrooms and fresh herbs."
         }
       ],
       "maincourses": [
         {
           "id": "106-4",
-          "name": "Couscous au Pois Chiches",
-          "price": 12.0
+          "name": "Chickpea Couscous",
+          "price": 12.0,
+          "description": "A satisfying couscous dish with chickpeas and roasted vegetables."
         },
         {
           "id": "106-5",
-          "name": "Gratin de Légumes",
-          "price": 11.75
+          "name": "Vegetable Gratin",
+          "price": 11.75,
+          "description": "A cheesy gratin layered with seasonal vegetables and herbs."
         },
         {
           "id": "106-6",
-          "name": "Tajine Végétarien",
-          "price": 13.5
+          "name": "Vegetarian Tagine",
+          "price": 13.5,
+          "description": "A fragrant tagine with mixed vegetables and Moroccan spices."
         },
         {
           "id": "106-7",
-          "name": "Ragoût de Haricots Blancs",
-          "price": 12.5
+          "name": "White Bean Stew",
+          "price": 12.5,
+          "description": "A comforting stew made with white beans, tomatoes, and rosemary."
         }
       ],
       "desserts": [
         {
           "id": "106-8",
-          "name": "Mousse au Chocolat Noir",
-          "price": 5.5
+          "name": "Dark Chocolate Mousse",
+          "price": 5.5,
+          "description": "A rich and velvety dark chocolate mousse with a hint of vanilla."
         },
         {
           "id": "106-9",
-          "name": "Tarte aux Fruits Rouges",
-          "price": 6.25
+          "name": "Red Fruit Tart",
+          "price": 6.25,
+          "description": "A buttery tart filled with fresh red berries and a light custard."
         },
         {
           "id": "106-10",
-          "name": "Sorbet à la Mangue",
-          "price": 5.25
+          "name": "Mango Sorbet",
+          "price": 5.25,
+          "description": "A refreshing sorbet made with ripe mangoes and a splash of lime."
         }
       ],
       "drinks": [
         {
           "id": "106-11",
-          "name": "Thé Vert à la Menthe",
-          "price": 3.0
+          "name": "Mint Green Tea",
+          "price": 3.0,
+          "description": "A soothing green tea brewed with fresh mint leaves."
         },
         {
           "id": "106-12",
-          "name": "Jus de Grenade",
-          "price": 4.5
+          "name": "Pomegranate Juice",
+          "price": 4.5,
+          "description": "A glass of freshly pressed pomegranate juice, full of antioxidants."
         },
         {
           "id": "106-13",
-          "name": "Smoothie Détox",
-          "price": 4.75
+          "name": "Detox Smoothie",
+          "price": 4.75,
+          "description": "A cleansing smoothie made with green vegetables and a touch of ginger."
         },
         {
           "id": "106-14",
-          "name": "Limonade au Miel",
-          "price": 3.5
+          "name": "Honey Lemonade",
+          "price": 3.5,
+          "description": "A refreshing lemonade sweetened with natural honey."
         },
         {
           "id": "106-15",
-          "name": "Infusion au Gingembre",
-          "price": 3.25
+          "name": "Ginger Infusion",
+          "price": 3.25,
+          "description": "A warming infusion made with fresh ginger and a touch of honey."
         }
       ]
     }
   },
   {
     "id": "107",
-    "name": "L'Oasis Végétale",
-    "address": "444 Rue des Palmiers",
+    "name": "Vegetable Oasis",
+    "address": "444 Palm Street",
     "city": "Tanger",
-    "description": "Un oasis urbain pour les amoureux de la cuisine végétarienne.",
+    "description": "An urban oasis for lovers of vegetarian cuisine.",
+    "image": "/assets/restaurants/107.png",
     "menu": {
       "starters": [
         {
           "id": "107-1",
-          "name": "Salade d'Epinards et Noix",
-          "price": 7.5
+          "name": "Spinach and Walnut Salad",
+          "price": 7.5,
+          "description": "A crunchy salad with spinach, walnuts, and a balsamic vinaigrette."
         },
         {
           "id": "107-2",
-          "name": "Soupe de Lentilles",
-          "price": 6.5
+          "name": "Lentil Soup",
+          "price": 6.5,
+          "description": "A hearty soup made with lentils, carrots, and warm spices."
         },
         {
           "id": "107-3",
-          "name": "Rouleaux de Printemps Végétariens",
-          "price": 7.0
+          "name": "Vegetarian Spring Rolls",
+          "price": 7.0,
+          "description": "Crispy spring rolls filled with fresh vegetables and herbs."
         }
       ],
       "maincourses": [
         {
           "id": "107-4",
-          "name": "Riz Pilaf aux Légumes",
-          "price": 11.5
+          "name": "Vegetable Pilaf Rice",
+          "price": 11.5,
+          "description": "A fragrant rice pilaf with a mix of colorful vegetables."
         },
         {
           "id": "107-5",
-          "name": "Tofu Grillé avec Riz Brun",
-          "price": 12.0
+          "name": "Grilled Tofu with Brown Rice",
+          "price": 12.0,
+          "description": "Grilled tofu served with a side of nutty brown rice."
         },
         {
           "id": "107-6",
-          "name": "Curry de Légumes au Lait de Coco",
-          "price": 13.0
+          "name": "Vegetable Curry with Coconut Milk",
+          "price": 13.0,
+          "description": "A rich and creamy curry made with mixed vegetables and coconut milk."
         },
         {
           "id": "107-7",
-          "name": "Risotto aux Champignons",
-          "price": 14.0
+          "name": "Mushroom Risotto",
+          "price": 14.0,
+          "description": "A creamy risotto with wild mushrooms and a touch of truffle oil."
         }
       ],
       "desserts": [
         {
           "id": "107-8",
-          "name": "Gâteau au Chocolat et Noisettes",
-          "price": 5.5
+          "name": "Chocolate and Hazelnut Cake",
+          "price": 5.5,
+          "description": "A rich chocolate cake topped with crunchy hazelnuts."
         },
         {
           "id": "107-9",
-          "name": "Crème de Coco et Mangue",
-          "price": 6.0
+          "name": "Coconut and Mango Cream",
+          "price": 6.0,
+          "description": "A creamy dessert made with coconut milk and fresh mango."
         },
         {
           "id": "107-10",
-          "name": "Panna Cotta au Citron Vert",
-          "price": 5.75
+          "name": "Lime Panna Cotta",
+          "price": 5.75,
+          "description": "A light and zesty panna cotta infused with lime."
         }
       ],
       "drinks": [
         {
           "id": "107-11",
-          "name": "Smoothie aux Fruits Rouges",
-          "price": 4.5
+          "name": "Berry Smoothie",
+          "price": 4.5,
+          "description": "A smoothie made with mixed berries and a splash of almond milk."
         },
         {
           "id": "107-12",
-          "name": "Thé Glacé au Citron",
-          "price": 3.5
+          "name": "Iced Lemon Tea",
+          "price": 3.5,
+          "description": "A refreshing iced tea with a hint of lemon."
         },
         {
           "id": "107-13",
-          "name": "Eau de Coco",
-          "price": 3.75
+          "name": "Coconut Water",
+          "price": 3.75,
+          "description": "A hydrating drink made from fresh coconut water."
         },
         {
           "id": "107-14",
-          "name": "Infusion de Verveine",
-          "price": 3.25
+          "name": "Verbena Infusion",
+          "price": 3.25,
+          "description": "A calming herbal tea made with verbena leaves."
         },
         {
           "id": "107-15",
-          "name": "Kombucha à la Menthe",
-          "price": 4.0
+          "name": "Mint Kombucha",
+          "price": 4.0,
+          "description": "A fizzy kombucha drink infused with fresh mint."
+        }
+      ]
+    }
+  },
+  {
+    "id": "108",
+    "name": "Ocean Breeze",
+    "address": "12 Coastal Road",
+    "city": "Essaouira",
+    "description": "A beachfront restaurant offering fresh seafood and vegetarian options with a stunning ocean view.",
+    "image": "/assets/restaurants/108.png",
+    "menu": {
+      "starters": [
+        {
+          "id": "108-1",
+          "name": "Seaweed Salad",
+          "price": 7.0,
+          "description": "A light and refreshing salad with a mix of seaweed and fresh vegetables."
+        },
+        {
+          "id": "108-2",
+          "name": "Grilled Octopus",
+          "price": 9.5,
+          "description": "Tender octopus grilled to perfection with a hint of lemon and garlic."
+        },
+        {
+          "id": "108-3",
+          "name": "Vegetarian Spring Rolls",
+          "price": 6.5,
+          "description": "Crispy spring rolls filled with seasonal vegetables and served with a tangy dip."
+        }
+      ],
+      "maincourses": [
+        {
+          "id": "108-4",
+          "name": "Seafood Paella",
+          "price": 15.0,
+          "description": "A rich and flavorful paella made with fresh seafood and saffron."
+        },
+        {
+          "id": "108-5",
+          "name": "Vegetable Tagine",
+          "price": 12.0,
+          "description": "A traditional Moroccan tagine filled with slow-cooked vegetables and spices."
+        },
+        {
+          "id": "108-6",
+          "name": "Grilled Fish of the Day",
+          "price": 14.0,
+          "description": "Freshly caught fish, grilled and served with a side of seasonal vegetables."
+        }
+      ],
+      "desserts": [
+        {
+          "id": "108-7",
+          "name": "Coconut Sorbet",
+          "price": 5.0,
+          "description": "A refreshing sorbet made with fresh coconut."
+        },
+        {
+          "id": "108-8",
+          "name": "Mango Tart",
+          "price": 6.5,
+          "description": "A sweet tart filled with fresh mango and a buttery crust."
+        }
+      ],
+      "drinks": [
+        {
+          "id": "108-9",
+          "name": "Mint Lemonade",
+          "price": 3.5,
+          "description": "A cooling lemonade with a hint of mint."
+        },
+        {
+          "id": "108-10",
+          "name": "Coconut Water",
+          "price": 4.0,
+          "description": "Pure coconut water served chilled."
+        }
+      ]
+    }
+  },
+  {
+    "id": "109",
+    "name": "Essaouira Bites",
+    "address": "45 Medina Street",
+    "city": "Essaouira",
+    "description": "A cozy spot in the heart of the medina, offering a fusion of Moroccan and international cuisine.",
+    "image": "/assets/restaurants/109.png",
+    "menu": {
+      "starters": [
+        {
+          "id": "109-1",
+          "name": "Harira Soup",
+          "price": 5.0,
+          "description": "A traditional Moroccan soup made with lentils, chickpeas, and tomatoes."
+        },
+        {
+          "id": "109-2",
+          "name": "Zaalouk",
+          "price": 6.0,
+          "description": "A smoky eggplant dip served with warm bread."
+        },
+        {
+          "id": "109-3",
+          "name": "Stuffed Dates",
+          "price": 4.5,
+          "description": "Sweet dates stuffed with almonds and honey."
+        }
+      ],
+      "maincourses": [
+        {
+          "id": "109-4",
+          "name": "Chicken Tagine with Preserved Lemons",
+          "price": 13.5,
+          "description": "A fragrant tagine with chicken, preserved lemons, and olives."
+        },
+        {
+          "id": "109-5",
+          "name": "Vegetarian Couscous",
+          "price": 12.0,
+          "description": "Couscous served with a variety of steamed vegetables and a spicy sauce."
+        },
+        {
+          "id": "109-6",
+          "name": "Lamb Kebab",
+          "price": 14.0,
+          "description": "Tender lamb kebabs marinated in Moroccan spices and grilled."
+        }
+      ],
+      "desserts": [
+        {
+          "id": "109-7",
+          "name": "Baklava",
+          "price": 5.0,
+          "description": "A sweet pastry made with layers of filo, nuts, and honey."
+        },
+        {
+          "id": "109-8",
+          "name": "Orange Blossom Cake",
+          "price": 6.0,
+          "description": "A moist cake flavored with orange blossom water."
+        }
+      ],
+      "drinks": [
+        {
+          "id": "109-9",
+          "name": "Moroccan Mint Tea",
+          "price": 2.5,
+          "description": "Traditional Moroccan tea brewed with fresh mint."
+        },
+        {
+          "id": "109-10",
+          "name": "Pomegranate Juice",
+          "price": 3.5,
+          "description": "Freshly squeezed pomegranate juice."
         }
       ]
     }

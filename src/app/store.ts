@@ -1,8 +1,4 @@
 import { combineReducers, configureStore } from "@reduxjs/toolkit";
-import authReducer from "../features/authSlice";
-import cartReducer from "../features/CartSlice";
-import restaurantsReducer from "../features/restaurants/restaurantsSlice";
-import storage from "redux-persist/lib/storage";
 import {
   FLUSH,
   PAUSE,
@@ -12,11 +8,17 @@ import {
   REGISTER,
   REHYDRATE,
 } from "redux-persist";
+import storage from "redux-persist/lib/storage";
+import authReducer from "../features/authSlice";
+import cartReducer from "../features/CartSlice";
+import productsReducer from "../features/products/productsSlice";
+import restaurantsReducer from "../features/restaurants/restaurantsSlice";
 
 const rootReducer = combineReducers({
   auth: authReducer,
   cart: cartReducer,
   restaurants: restaurantsReducer,
+  products: productsReducer,
 });
 
 const persistConfig = {

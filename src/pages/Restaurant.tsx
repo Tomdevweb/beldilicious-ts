@@ -1,6 +1,5 @@
 import React, { useState } from "react";
-import { useParams } from "react-router-dom";
-import restaurantsData from "../data/restaurants.json";
+import { Link, useParams } from "react-router-dom";
 import { Segmented } from "antd";
 import "../styles/restaurant.scss";
 import ProductCard from "../components/ProductCard";
@@ -11,7 +10,6 @@ import { Product } from "../types/types";
 
 const Restaurant: React.FC = () => {
   const param = useParams();
-
   const { restaurants } = useAppSelector((state) => state.restaurants);
   const restaurant = restaurants.find(
     (restaurant) => restaurant.id === param.id
@@ -67,6 +65,7 @@ const Restaurant: React.FC = () => {
         </>
       ) : (
         <>
+          <Link to="/home"> -- Retour</Link>
           <h1>{restaurant?.name}</h1>
           <p>{restaurant?.description}</p>
           <div>

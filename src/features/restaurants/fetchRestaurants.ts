@@ -13,7 +13,7 @@ export const fetchRestaurants = createAsyncThunk<
   Restaurant[],
   void,
   { rejectValue: SerializedError }
->("restaurants/fetchRestaurants", async () => {
+>("restaurants/fetchRestaurants", async (_, { rejectWithValue }) => {
   try {
     await sleep(2000);
     // const res = { data: { toto: true } };
@@ -21,6 +21,10 @@ export const fetchRestaurants = createAsyncThunk<
     return res.data;
   } catch (error) {
     console.error("Error fetching restaurants:", error);
-    throw error;
+    return rejectWithValue({
+      name: "FetchError",
+      message:
+        error instanceof Error ? error.message : "Unknown error occurred",
+    } as SerializedError);
   }
 });

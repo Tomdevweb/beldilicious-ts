@@ -10,6 +10,7 @@ export type Restaurant = {
   address: string;
   city: string;
   description: string;
+  image: string;
   menu: {
     starters: { name: string; price: number }[];
     maincourses: { name: string; price: number }[];
@@ -22,4 +23,5 @@ export type Product = {
   name: string;
   price: number;
   id: string;
+  description: string;
 };

@@ -19,21 +19,23 @@ main {
 
 .header-container {
   background-image: url("../assets/header-background.png");
+  background-size: cover;
   background-size: 100%;
-  background-position: 0% 25%;
-  height: 550px;
+  background-position: 0% 30%;
+  height: 600px;
 
   .header {
+    height: 85%;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100%;
     gap: 2rem;
   }
 
   .header-title {
-    font-size: 30px;
+    font-size: 40px;
+    text-align: center;
   }
 }
 
@@ -42,20 +44,30 @@ main {
   height: 200px;
   padding: 40px 30px;
   gap: 1rem;
-  border-radius: 3px;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.1);
 
   label {
     font-size: 16px;
+  }
+
+  .search-box-description {
+    font-size: 16px;
+    letter-spacing: 0.5px;
   }
   .search-box {
     height: 60px;
     display: flex;
     justify-content: center;
     margin: 20px 0;
-    padding: 2px;
+    border: 1px solid rgb(209, 209, 209);
+    border-radius: 50px;
+    padding: 5px;
     box-shadow: 5px 10px 10px -5px rgba(0, 0, 0, 0.1);
+
     .location-icon {
-      height: 40px;
+      height: 30px;
       align-self: center;
     }
     #search-input {
@@ -69,12 +81,16 @@ main {
     button {
       width: 30%;
       border: none;
-      border-radius: 0px 5px 5px 0px;
-      background-color: #0097b2;
+      border-radius: 50px;
+      background-color: #85e5e4;
       color: #fff;
       font-size: 16px;
       font-weight: 600;
       cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #6ec1bf;
     }
   }
 }
@@ -84,6 +100,7 @@ main {
   display: flex;
   justify-content: end;
   padding: 20px;
+
   div {
     display: flex;
     width: 100%;
@@ -118,7 +135,6 @@ main {
 
 .home-title {
   font-size: 30px;
-
   font-weight: 600;
   margin-left: 20px;
 }
@@ -126,7 +142,9 @@ main {
 .cards-container {
   max-width: 1440px;
   display: flex;
+  justify-content: center;
   flex-wrap: wrap;
+  margin-top: 100px;
   gap: 2rem;
   padding: 20px;
 }
@@ -134,19 +152,15 @@ main {
 .card {
   background-color: #fdfdfd;
   width: 25%;
-  height: fit-content;
+  height: 350px; /* Fixe une hauteur pour toutes les cartes */
   font-size: 12px;
   box-shadow: 0px 10px 15px -3px rgba(0, 0, 0, 0.2);
   text-decoration: none;
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 
-  .card-cover {
-    width: 300px;
-    height: 300px;
-  }
-  .ant-card {
-    border-radius: none;
-  }
   .ant-card-cover {
     img {
       height: 200px;
@@ -157,19 +171,17 @@ main {
   }
 
   .ant-card-body {
-    padding: 15px 20px;
-  }
-  .card-content-container {
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-
     .restaurant-title {
       font-size: 20px;
       font-weight: 500;
     }
-    .restaurant-description {
-      font-size: 13px;
+    .ant-card-meta-description {
+      display: -webkit-box;
+      -webkit-line-clamp: 2; /* Limite à 2 lignes */
+      -webkit-box-orient: vertical;
+      overflow: hidden;
+      text-overflow: ellipsis;
+      margin-bottom: 10px;
     }
 
     .restaurant-style {

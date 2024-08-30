@@ -13,6 +13,7 @@ const ProductCard: React.FC<Props> = ({ product, onShowModal }) => {
     <Card hoverable onClick={onShowModal}>
       <Meta title={product.name} />
       <span>{product.price} €</span>
+      <p>{product.description}</p>
     </Card>
   );
 };

@@ -38,7 +38,8 @@ const ProductModal: React.FC<ProductModalProps> = ({ product, closeModal }) => {
         <div className="modal-content">
           <div className="modal-product-details">
             <h1>{product.name}</h1>
-            {/* <p>{product.description}</p> */}
+            <p>{product.description}</p>
+            <p>{product.price} €</p>
           </div>
         </div>
         <div className="modal-add-product-container">
