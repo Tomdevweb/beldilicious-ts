@@ -10,10 +10,16 @@ type Props = {
 
 const ProductCard: React.FC<Props> = ({ product, onShowModal }) => {
   return (
-    <Card hoverable onClick={onShowModal}>
-      <Meta title={product.name} />
-      <span>{product.price} €</span>
-      <p>{product.description}</p>
+    <Card hoverable onClick={onShowModal} className="product-card">
+      <Meta
+        title={product.name}
+        description={
+          <div className="product-details">
+            <p className="product-description">{product.description}</p>
+            <span>{product.price} €</span>
+          </div>
+        }
+      />
     </Card>
   );
 };
