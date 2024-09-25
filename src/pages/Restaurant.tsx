@@ -7,6 +7,7 @@ import ProductModal from "../components/ProductModal";
 import NavBar from "../components/NavBar";
 import { useAppSelector } from "../app/hooks";
 import { Product } from "../types/types";
+import { useRestaurantImage } from "../hooks/useRestaurantImage";
 
 const Restaurant: React.FC = () => {
   const param = useParams();
@@ -15,6 +16,7 @@ const Restaurant: React.FC = () => {
     (restaurant) => restaurant.id === param.id
   );
 
+  const imageUrl = useRestaurantImage(restaurant?.id);
   // If url param isn't good
   const idNotFound = !!restaurants && !!param.id && !restaurant;
 
@@ -65,10 +67,17 @@ const Restaurant: React.FC = () => {
         </>
       ) : (
         <>
-          <Link to="/home"> -- Retour</Link>
-          <img src={restaurant?.image} alt="" />
-          <h1>{restaurant?.name}</h1>
-          <p>{restaurant?.description}</p>
+          <div className="restaurant-header-container">
+            <Link to="/home"> -- Retour</Link>
+            <div className="restaurant-header">
+              <img src={imageUrl} alt="" />
+              <div className="restaurant-header-description">
+                <h1>{restaurant?.name}</h1>
+                <p>{restaurant?.description}</p>
+              </div>
+            </div>
+          </div>
+
           <div>
             <Segmented<string>
               options={["Entrées", "Plats", "Desserts", "Boissons"]}
@@ -77,7 +86,7 @@ const Restaurant: React.FC = () => {
               block
             />
           </div>
-          <div>
+          <div className="products-list">
             {filteredProducts?.map((product, index) => (
               <div key={index}>
                 <ProductCard
